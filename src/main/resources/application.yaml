@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-ai-tax-app
+
+  profiles:
+    include:
+      - ai
+      - db
+      - file
+      - vector
+
+server:
+  port: 8085

@@ -1,0 +1,48 @@
+# docker-compose.yaml
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: tax_app_postgres
+    environment:
+      POSTGRES_DB: tax_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: tax_app_qdrant
+    ports:
+      - "6333:6333" # REST API & Dashboard
+      - "6334:6334" # gRPC (Spring AI tərəfindən istifadə olunur)
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: tax_app_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    # rtx
+    deploy:
+       resources:
+         reservations:
+           devices:
+             - driver: nvidia
+               count: 1
+               capabilities: [gpu]
+
+volumes:
+  postgres_data:
+  qdrant_data:
+  ollama_data:

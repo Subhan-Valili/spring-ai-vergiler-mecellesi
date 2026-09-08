@@ -1,0 +1,8 @@
+spring:
+  ai:
+    vectorstore:
+      qdrant:
+        host: localhost
+        port: 6334 # Qdrant gRPC portu
+        collection-name: tax_documents
+        initialize-schema: true

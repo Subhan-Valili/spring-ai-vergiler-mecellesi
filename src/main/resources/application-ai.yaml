@@ -1,0 +1,11 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: qwen2.5:7b
+          temperature: 0.2
+          num-ctx: 4096
+      embedding:
+        model: bge-m3
