@@ -26,90 +26,42 @@ public class TaxRagService {
     private final ChatModel chatModel;
     private final VectorStore vectorStore;
 
+    private static final String SYSTEM_PROMPT = """
+            Sən Azərbaycan Respublikasının Vergi Məcəlləsi üzrə peşəkar hüquqi assistentisən.
+            
+            TƏLƏBLƏR VƏ QAYDALAR:
+            1. Cavabı MÜMKÜN QƏDƏR ƏTRAFLI, İSRAFLI DETALLI və MƏNTİQİ şəkildə ver. Qısa xülasə ilə kifayətlənmə.
+            2. Kontekstdə olan HƏR BİR bəndi, şərti, müddəti və istisnanı buraxmadan tək-tək izah et.
+            3. Cavabı bu şəkildə geniş strukturlaşdır:
+               - **Hüquqi Mahiyyət və Anlayış**: Maddənin ümumi məqsədi və geniş tərifi.
+               - **Əhatə Etdiyi Hallar və Şərtlər**: Bütün aidiyyəti bəndlərin təfərrüatlı izahı (bənd nömrələri ilə).
+               - **İstisnalar (Şamil edilməyən / Yaratmayan hallar)**: Inkar mənalı bəndlərin ("yaratmır", "sayılmır") ayrı-ayrı geniş izahı.
+               - **Xüsusi Qaydalar və Müddətlər**: Kontekstdə keçən müddətlər (günlər, aylar), faizlər və ya xüsusi tələblər.
+            4. Maddə və bənd nömrələrini (məsələn, Maddə 19.2, Maddə 19.3.1) aydın göstər.
+            5. Kontekst xaricinə çıxma, uydurma cavab vermə.
+            
+            Kontekst:
+            {context}
+            
+            Sual:
+            {question}
+            """;
+
     public TaxRagService(ChatClient.Builder chatClientBuilder, VectorStore vectorStore, ChatModel chatModel) {
         this.chatClient = chatClientBuilder.build();
         this.vectorStore = vectorStore;
         this.chatModel = chatModel;
     }
 
-    public Flux<String> askTaxQuestionStream(String question) {
-        List<Document> similarDocs = vectorStore.similaritySearch(
-                SearchRequest.builder()
-                        .query(question)
-                        .topK(5)
-                        .similarityThreshold(0.38)  // müvəqqəti - bütün nəticələri gör
-                        .build()
-        );
-
-// DEBUG
-        similarDocs.forEach(doc ->
-                log.info("SCORE: {} | CHUNK:\n{}\n---", doc.getMetadata().get("distance"), doc.getText())
-        );
-
-        if (similarDocs.isEmpty()) {
-            return Flux.just("Təqdim olunan vergi qanunvericiliyi bazasında bu suala uyğun məlumat tapılmadı.");
-        }
-
-        String context = similarDocs.stream()
-                .map(Document::getText)
-                .collect(Collectors.joining("\n\n---\n\n"));
-
-        String systemPrompt = """
-            Sən Azərbaycan Respublikasının Vergi Məcəlləsi üzrə peşəkar hüquqi assistentisən.
-
-            QAYDALAR:
-            1. YALNIZ aşağıdakı vergi qanunvericiliyi kontekstinə əsasən sualı dəqiq cavablandır.
-            2. Cavabda müvafiq Vergi Məcəlləsinin maddə nömrələrini (məsələn, Maddə 102.1.30) aydın qeyd et.
-            3. Dəyişiklik aktlarının texniki ifadələrini ("sözləri əvəz edilmişdir" və s.) təkrarlama, maddənin son vəziyyətinin mahiyyətini izah et.
-            4. Əgər cavab kontekstdə yoxdursa, uydurma cavab vermə, sadəcə bilmədiyini qeyd et.
-
-            Kontekst:
-            {context}
-            """;
-
-        Flux<String> tokenStream = chatClient.prompt()
-                .system(sp -> sp.text(systemPrompt).param("context", context))
-                .user(question)
-                .stream()
-                .content();
-
-        return bufferIntoSentences(tokenStream);
-    }
-
-    private Flux<String> bufferIntoSentences(Flux<String> tokenStream) {
-        StringBuilder buffer = new StringBuilder();
-        Pattern sentenceEnd = Pattern.compile(".*?[.!?:](\\s+|$)", Pattern.DOTALL);
-
-        Flux<String> sentences = tokenStream.concatMap(token -> {
-            buffer.append(token);
-            List<String> completed = new ArrayList<>();
-
-            Matcher matcher = sentenceEnd.matcher(buffer);
-            int lastEnd = 0;
-            while (matcher.find()) {
-                completed.add(matcher.group().trim());
-                lastEnd = matcher.end();
-            }
-            if (lastEnd > 0) {
-                buffer.delete(0, lastEnd);
-            }
-            return Flux.fromIterable(completed);
-        });
-
-        // Axın bitəndə buffer-də qalan (nöqtəsiz) son hissəni də göndər
-        return sentences.concatWith(Flux.defer(() ->
-                buffer.length() > 0 ? Flux.just(buffer.toString().trim()) : Flux.empty()
-        ));
-    }
-
     public String askTaxQuestion(String question) {
         List<Document> similarDocuments = vectorStore.similaritySearch(
                 SearchRequest.builder()
                         .query(question)
-                        .topK(10)
+                        .topK(5)
                         .similarityThreshold(0.38)
                         .build()
         );
+
         similarDocuments.forEach(doc ->
                 log.info("SCORE: {} | CHUNK:\n{}\n---", doc.getMetadata().get("distance"), doc.getText())
         );
@@ -119,30 +71,10 @@ public class TaxRagService {
         }
 
         String context = similarDocuments.stream()
-                .map(doc -> String.format(
-                        "Maddə: %s\nFəsil: %s\nMətn:\n%s",
-                        doc.getMetadata().get("article"),
-                        doc.getMetadata().get("chapter"),
-                        doc.getText()
-                ))
+                .map(Document::getText)
                 .collect(Collectors.joining("\n\n---\n\n"));
 
-        PromptTemplate promptTemplate = new PromptTemplate("""
-                Sən Azərbaycan Respublikasının Vergi Məcəlləsi üzrə peşəkar hüquqi assistentisən.
-                
-                QAYDALAR:
-                1. YALNIZ aşağıdakı vergi qanunvericiliyi kontekstinə əsasən sualı dəqiq cavablandır.
-                2. Cavabda müvafiq Vergi Məcəlləsinin maddə nömrələrini (məsələn, Maddə 102.1.30) aydın qeyd et.
-                3. Dəyişiklik aktlarının texniki ifadələrini ("sözləri əvəz edilmişdir" və s.) təkrarlama, maddənin son vəziyyətinin mahiyyətini izah et.
-                4. Əgər cavab kontekstdə yoxdursa, uydurma cavab vermə, sadəcə bilmədiyini qeyd et.
-
-                Kontekst:
-                {context}
-
-                Sual:
-                {question}
-                """);
-
+        PromptTemplate promptTemplate = new PromptTemplate(SYSTEM_PROMPT);
         Prompt prompt = promptTemplate.create(Map.of(
                 "context", context,
                 "question", question
@@ -150,4 +82,55 @@ public class TaxRagService {
 
         return chatModel.call(prompt).getResult().getOutput().getText();
     }
+
+//    public Flux<String> askTaxQuestionStream(String question) {
+//        List<Document> similarDocs = vectorStore.similaritySearch(
+//                SearchRequest.builder()
+//                        .query(question)
+//                        .topK(6)
+//                        .similarityThreshold(0.45)
+//                        .build()
+//        );
+//
+//        if (similarDocs.isEmpty()) {
+//            return Flux.just("Təqdim olunan vergi qanunvericiliyi bazasında bu suala uyğun məlumat tapılmadı.");
+//        }
+//
+//        String context = similarDocs.stream()
+//                .map(Document::getText)
+//                .collect(Collectors.joining("\n\n---\n\n"));
+//
+//        Flux<String> tokenStream = chatClient.prompt()
+//                .system(sp -> sp.text(SYSTEM_PROMPT).param("context", context).param("question", question))
+//                .user(question)
+//                .stream()
+//                .content();
+//
+//        return bufferIntoSentences(tokenStream);
+//    }
+
+//    private Flux<String> bufferIntoSentences(Flux<String> tokenStream) {
+//        StringBuilder buffer = new StringBuilder();
+//        Pattern sentenceEnd = Pattern.compile(".*?[.!?:](\\s+|$)", Pattern.DOTALL);
+//
+//        Flux<String> sentences = tokenStream.concatMap(token -> {
+//            buffer.append(token);
+//            List<String> completed = new ArrayList<>();
+//
+//            Matcher matcher = sentenceEnd.matcher(buffer);
+//            int lastEnd = 0;
+//            while (matcher.find()) {
+//                completed.add(matcher.group().trim());
+//                lastEnd = matcher.end();
+//            }
+//            if (lastEnd > 0) {
+//                buffer.delete(0, lastEnd);
+//            }
+//            return Flux.fromIterable(completed);
+//        });
+//
+//        return sentences.concatWith(Flux.defer(() ->
+//                buffer.length() > 0 ? Flux.just(buffer.toString().trim()) : Flux.empty()
+//        ));
+//    }
 }

@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 09102026_001_insert_data
+      author: Subhan-Valili
+      context: dev
+      changes:
+        - sqlFile:
+            path: db/changelog/data/insert-data.sql
+            relativeToChangelogFile: false

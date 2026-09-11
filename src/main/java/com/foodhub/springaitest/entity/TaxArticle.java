@@ -1,46 +1,40 @@
 package com.foodhub.springaitest.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+import lombok.experimental.SuperBuilder;
 
-import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
 @Table(name = "tax_articles")
-@Data
-public class TaxArticle {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@NoArgsConstructor
+@AllArgsConstructor
+@SuperBuilder
+@Getter
+@Setter
+@ToString(callSuper = true)
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class TaxArticle extends BaseEntity{
 
     @Column(name = "article_number", nullable = false)
-    private String articleNumber; // "Maddə 164"
+    String articleNumber;
+
+    @Column(name = "title")
+    String title;
 
     @Column(name = "chapter")
-    private String chapter; // "VIII Fəsil. ƏDV"
+    String chapter;
 
-    @Column(name = "source_title")
-    private String sourceTitle; // hansı PDF-dən gəlib
-
-    @Column(name = "order_index")
-    private Integer orderIndex; // PDF-dəki sıra (manual review üçün faydalı)
-
-    @Column(name = "content", columnDefinition = "TEXT", nullable = false)
-    private String content;
-
+    @Builder.Default
     @Column(name = "active")
-    private boolean active = true;
+    boolean active = true;
 
-    @Column(name = "synced_to_vector_store")
-    private boolean syncedToVectorStore = false;
-
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
-
-    @PrePersist
-    @PreUpdate
-    public void touch() {
-        this.updatedAt = LocalDateTime.now();
-    }
+    @Builder.Default
+    @ToString.Exclude
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true)
+    List<TaxSection> sections = new ArrayList<>();
 }

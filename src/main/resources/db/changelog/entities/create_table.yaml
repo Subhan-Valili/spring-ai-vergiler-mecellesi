@@ -1,0 +1,95 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-tax-articles
+      author: Subhan-Valili
+      changes:
+        - createTable:
+            tableName: tax_articles
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: article_number
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: title
+                  type: VARCHAR(500)
+              - column:
+                  name: chapter
+                  type: VARCHAR(255)
+              - column:
+                  name: active
+                  type: BOOLEAN
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+
+  - changeSet:
+      id: 002-create-tax-sections
+      author: Subhan-Valili
+      changes:
+        - createTable:
+            tableName: tax_sections
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: section_number
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: content
+                  type: TEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: order_index
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: synced_to_vector_store
+                  type: BOOLEAN
+                  defaultValueBoolean: false
+              - column:
+                  name: vector_id
+                  type: VARCHAR(255)
+              - column:
+                  name: article_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_tax_sections_article
+                    references: tax_articles(id)
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP

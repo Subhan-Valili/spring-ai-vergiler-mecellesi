@@ -35,13 +35,12 @@ services:
     restart: unless-stopped
     # rtx
     deploy:
-       resources:
-         reservations:
-           devices:
-             - driver: nvidia
-               count: 1
-               capabilities: [gpu]
-
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
 volumes:
   postgres_data:
   qdrant_data:

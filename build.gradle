@@ -27,6 +27,7 @@ dependencies {
     // Web və Data
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.liquibase:liquibase-core'
 
     // Spring AI (Ollama və Qdrant) - GA versiyası üçün yeni adlar
     implementation 'org.springframework.ai:spring-ai-starter-model-ollama'

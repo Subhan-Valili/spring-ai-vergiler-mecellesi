@@ -7,9 +7,7 @@ import java.util.List;
 
 public interface TaxArticleRepository extends JpaRepository<TaxArticle, Long> {
 
-    List<TaxArticle> findByActiveTrueOrderByOrderIndexAsc();
-
-    List<TaxArticle> findBySyncedToVectorStoreFalseAndActiveTrue();
+    List<TaxArticle> findByActiveTrueOrderByArticleNumberAsc();
 
     long countByActiveTrue();
 }
