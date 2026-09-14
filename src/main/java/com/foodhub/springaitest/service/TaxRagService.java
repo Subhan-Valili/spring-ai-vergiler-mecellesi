@@ -2,7 +2,9 @@ package com.foodhub.springaitest.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.metadata.Usage;
 import org.springframework.ai.chat.model.ChatModel;
+import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.document.Document;
@@ -54,6 +56,8 @@ public class TaxRagService {
     }
 
     public String askTaxQuestion(String question) {
+        long startTime = System.currentTimeMillis();
+
         List<Document> similarDocuments = vectorStore.similaritySearch(
                 SearchRequest.builder()
                         .query(question)
@@ -80,7 +84,21 @@ public class TaxRagService {
                 "question", question
         ));
 
-        return chatModel.call(prompt).getResult().getOutput().getText();
+        ChatResponse response = chatModel.call(prompt);
+        long duration = System.currentTimeMillis() - startTime;
+
+        if (response.getMetadata() != null && response.getMetadata().getUsage() != null) {
+            Usage usage = response.getMetadata().getUsage();
+
+            log.info("================ TOKEN XƏRCİ VƏ METRİKALAR ================");
+            log.info("Prompt Tokens (Sual + Kontekst xərci): {}", usage.getPromptTokens());
+            log.info("Generation Tokens (Modelin cavab xərci): {}", usage.getCompletionTokens());
+            log.info("Ümumi İşlədilən Token: {}", usage.getTotalTokens());
+            log.info("Soruşma və cavabalma müddəti: {} ms", duration);
+            log.info("==========================================================");
+        }
+
+        return response.getResult().getOutput().getText();
     }
 
 //    public Flux<String> askTaxQuestionStream(String question) {

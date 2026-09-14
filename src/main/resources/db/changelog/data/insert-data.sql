@@ -7930,3 +7930,1849 @@ VALUES ((SELECT id FROM tax_articles WHERE article_number = '106'), '106.1',
        ((SELECT id FROM tax_articles WHERE article_number = '106'), '106.10',
         'Bu Məcəllə ilə müəyyən olunmuş qaydada gəlirlərin və xərclərin uçotunu aparan, ƏDV-nin məqsədləri üçün qeydiyyata alınmayan və əməliyyatlarının həcmi ardıcıl 12 aylıq dövrün istənilən ayında (aylarında) 200.000 manatadək olan rezident müəssisənin təsisçisi (payçısı) və yaxud səhmdarları olan hüquqi şəxslərin dividend gəlirləri vergidən azaddır.',
         53, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLES 107-130 (Fəsil X)
+-- ============================
+
+-- ============================
+-- TAX ARTICLE (Maddə 107)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('107',
+        'Tətbiq sahəsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '107'), '107',
+        'Bu fəsil gəlir vergisinin və mənfəət vergisinin məqsədləri üçün tətbiq edilir.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 108)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('108',
+        'Gəlirin əldə edilməsi ilə bağlı xərclər',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '108'), '108.1',
+        'Bu fəsilə uyğun olaraq gəlirdən çıxılmayan xərclərdən başqa, gəlirin əldə edilməsi ilə bağlı olan bütün xərclər, həmçinin qanunla nəzərdə tutulmuş icbari ödənişlər gəlirdən çıxılır. Gəlirdən çıxılan xərclər qanunla müəyyən edilmiş qaydada rəsmiləşdirilməlidir. Qanunla müəyyən edilmiş qaydada rəsmiləşdirilməyən xərclərin gəlirdən çıxılmasına yol verilmir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '108'), '108.1-1',
+        'Alışı və ya mədaxili bu Məcəllədə nəzərdə tutulmuş qaydada rəsmiləşdirilməyən mallara görə vergi ödəyicisinə bu Məcəllənin 58.8.2-ci maddəsinə əsasən maliyyə sanksiyası tətbiq edilmişdirsə, həmin malların bu Məcəllənin 58.16-cı maddəsinə uyğun olaraq müəyyən edilən dəyəri gəlirdən çıxılan xərclərə aid edilir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '108'), '108.2',
+        'Vergi ödəyicisi tərəfindən vergiyə cəlb edilən əməliyyatlarla yanaşı, vergidən azad olunan, yaxud mənfəət (gəlir) vergisinə cəlb edilməyən əməliyyatlar aparıldıqda, habelə qeyri-sahibkarlıq fəaliyyəti ilə bağlı əməliyyatlar aparıldıqda, həmin əməliyyatlar üzrə gəlirlərin və xərclərin uçotu ayrılıqda aparılmalıdır. Vergi ödəyicisi tərəfindən vergiyə cəlb olunan və vergidən azad olunan, yaxud mənfəət (gəlir) vergisinə cəlb edilməyən, habelə qeyri-sahibkarlıq fəaliyyəti ilə bağlı əməliyyatlar üzrə çəkilən, lakin bölüşdürülməsi mümkün olmayan xərclərin gəlirdən çıxılan məbləği vergiyə cəlb edilən gəlirlərin vergi ödəyicisinin ümumi gəlirlərində xüsusi çəkisi əsasında müəyyən edilir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '108'), '108.3',
+        'Bina tikintisi fəaliyyəti ilə məşğul olan şəxslər tərəfindən tikilən binalardan dövlətə yaşayış və qeyri-yaşayış sahələri ayrıldıqda, dövlətə ayrılan yaşayış və qeyri-yaşayış sahələrinə çəkilmiş məsrəflər gəlirdən çıxılan xərclərə aid edilir.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '108'), '108.4',
+        'Azərbaycan Respublikasının ərazisində ezamiyyələr üzrə ezamiyyə xərcləri müvafiq təsdiqedici sənədlər əsasında (gündəlik xərclər istisna olmaqla) müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqanın (qurumun) müəyyənləşdirdiyi norma daxilində gəlirdən çıxılan xərclərə aid edilir. Azərbaycan Respublikasının ərazisində ezamiyyə zamanı mehmanxana xərcləri barədə müvafiq təsdiqedici sənədlər təqdim edilmədiyi hallarda ezamiyyə xərclərinin 1 günlük normasının mehmanxana xərcləri üçün müəyyən edilmiş hissəsinin 50 faizi gəlirdən çıxılır.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '108'), '108.5',
+        'Müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən müəyyən edilmiş təbii itki normaları daxilində zayolmadan əmələgələn itkilər, təbii itki normaları daxilində xarabolmalar və bu kimi əskikgəlmələr vergitutma məqsədləri üçün gəlirdən çıxılır.',
+        6, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 109)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('109',
+        'Gəlirdən çıxılmayan xərclər',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.1',
+        'Əsas vəsaitlərin alınmasına və qurulmasına çəkilən xərclərin və bu Məcəllənin 143-cü maddəsinə uyğun olaraq kapital xarakterli digər xərclərin gəlirdən çıxılmasına yol verilmir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.2',
+        'Qeyri-kommersiya fəaliyyəti ilə bağlı olan xərclərin gəlirdən çıxılmasına yol verilmir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.3',
+        'Bu Məcəllənin 119.2-ci maddəsində nəzərdə tutulmuş xərclər istisna olmaqla, işçilərin və onların ailə üzvlərinin sosial xarakterli xərclərinin və əyləncə xərclərinin gəlirdən çıxılmasına yol verilmir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.4',
+        'Sahibkarlıq fəaliyyəti əyləncə və ya sosial xarakteri daşıyan vergi ödəyicisinin xərcləri bu cür fəaliyyət çərçivəsində çəkilirsə, müvafiq olaraq əyləncə və sosial xərclər gəlirdən çıxılır.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.5',
+        'Əmək haqqı kartlarının alınmasına çəkilən xərclər istisna olmaqla, fiziki şəxsin fərdi istehlakla və ya əmək haqqının alınması ilə bağlı olan xərcləri gəlirdən çıxılmır.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.6',
+        'Ehtiyat fondlarına ayırma məbləğləri yalnız bu Məcəllənin 111-ci və 112-ci maddələrinə müvafiq surətdə gəlirdən çıxılır.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.7',
+        'Faktiki ezamiyyə xərclərinin müvafiq icra hakimiyyəti orqanının müəyyənləşdirdiyi normadan artıq olan hissəsi gəlirdən çıxılmır.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.8',
+        '"Nağdsız hesablaşmalar haqqında" Azərbaycan Respublikası Qanununun 3.5-ci maddəsində göstərilən mallar, qiymətli daşlar, qiymətli metallar, o cümlədən qiymətli daşlardan və qiymətli metallardan hazırlanmış məmulatlar, daşınmaz əmlak, avtomobil nəqliyyatı vasitələri və daşınar əsas vəsaitlər istisna olmaqla, digər malların vergi ödəyicisi kimi vergi orqanında uçotda olmayan fiziki şəxslərdən alış aktı əsasında alınması və ya malların vergi ödəyicilərindən bu Məcəllənin 50.8-ci maddəsinin tələblərinə cavab verən nəzarət kassa aparatının çeki əsasında alınması üzrə gəlirdən çıxılan xərclərin yuxarı həddi vergi ödəyicisinin hər il üçün gəlirlərinin və xərclərinin ən yüksəyinin hər bir hal üzrə 2 faizi həddində məhdudlaşdırılır və bu həddən yuxarı məbləğ gəlirdən çıxılmır.',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '109'), '109.9',
+        'Əmtəəsiz əməliyyatlar çərçivəsində əldə edilmiş sənədlər gəlirdən çıxılan xərcləri təsdiq edən sənəd hesab edilmir və təqdim edilən malların (işlərin, xidmətlərin) dəyəri bu Məcəllənin 14-cü, 14-1-ci və 67-ci maddələri nəzərə alınmaqla gəlirdən çıxılır.',
+        9, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 110)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('110',
+        'Gəlirdən faizlər üzrə çıxılan məbləğlərin məhdudlaşdırılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '110'), '110.1',
+        'Xaricdən alınmış borclar üzrə, habelə qarşılıqlı surətdə asılı olan şəxslərin bir-birinə ödədikləri faizlərin faktiki məbləği (hesablama metodundan istifadə edildikdə ödənilməli faizlərin məbləği) faizlərin aid olduğu dövrdə eyni valyuta ilə, oxşar müddətə verilmiş banklararası kredit hərracında olan və ya hərraclar keçirilmədiyi təqdirdə Azərbaycan Respublikası Mərkəzi Bankının dərc etdiyi banklararası kreditlər üzrə faizlərin orta səviyyəsinin 125 faizdən artıq olmamaqla gəlirdən çıxılır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '110'), '110.2',
+        'Bu Məcəllənin 14-1.2-ci maddəsində nəzərdə tutulan şəxslərdən alınmış borclar üzrə əməliyyatlara bu Məcəllənin 14-1-ci maddəsinin müddəaları tətbiq edilir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '110'), '110.3',
+        'Bu maddənin digər müddəalarından asılı olmayaraq, xaricdən alınan borclar (xarici banklar və kredit təşkilatları tərəfindən verilmiş, habelə xarici birjalarda ticarət olunan istiqrazlar üzrə borclar istisna olmaqla) vergi ödəyicisinin xalis aktivlərindən (kapitalından) iki dəfədən çox olduğu halda, borcun xalis aktivdən (kapitaldan) iki dəfədən çox olan hissəsinə görə hesablanmış faizlərin gəlirdən çıxılmasına yol verilmir. Bu maddənin müddəaları rezident banklara və kredit təşkilatlarına aid edilmir.',
+        3, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 111)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('111',
+        'Ümidsiz və şübhəli borcların gəlirdən çıxılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '111'), '111.1',
+        'Əgər malların təqdim edilməsi, işlərin görülməsi və xidmətlərin göstərilməsi ilə əlaqədar gəlir əvvəllər sahibkarlıq fəaliyyətindən əldə edilən ümumi gəlirə daxil edilmişdirsə, vergi ödəyicisi onlarla bağlı olan ümidsiz borc məbləğini gəlirdən çıxmaq hüququna malikdir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '111'), '111.2',
+        'Ümidsiz borc məbləğinin gəlirdən çıxılmasına vergi ödəyicisinin mühasibat kitablarında ümidsiz borc məbləğinin dəyəri olmayan borc kimi silindiyi vaxt yol verilir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '111'), '111.3',
+        'Banklar və bank fəaliyyətinin ayrı-ayrı növlərini həyata keçirən kredit təşkilatları qanunvericiliyə uyğun olaraq Azərbaycan Respublikası Mərkəzi Bankının müəyyən etdiyi qaydada aktivlərin təsnifatından asılı olaraq yaratdıqları xüsusi ehtiyatları vergitutma məqsədləri üçün müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilmiş qaydada gəlirdən çıxmaq hüququna malikdirlər.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '111'), '111.4',
+        'Müflis elan olunmuş banklar vergitutma məqsədləri üçün müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən müəyyən edilmiş qaydada xüsusi ehtiyatları yaratmaqla gəlirdən çıxmaq hüququna malikdirlər.',
+        4, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 112)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('112',
+        'Ehtiyat sığorta fondlarına ayırmaların gəlirdən çıxılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '112'), '112',
+        'Sığorta fəaliyyəti ilə məşğul olan hüquqi şəxs Azərbaycan Respublikasının qanunvericiliyi ilə müəyyən edilmiş normalara uyğun olaraq ehtiyat sığorta fondlarına ayırma məbləğlərini gəlirdən çıxmaq hüququna malikdir.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 113)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('113',
+        'Elmi tədqiqat, layihə-axtarış və təcrübə konstruktor işlərinə çəkilən xərclərin gəlirdən çıxılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '113'), '113',
+        'Gəlir götürmək məqsədi ilə aparılan elmi tədqiqat, layihə-axtarış və təcrübə-konstruktor işlərinə çəkilən xərclər (əsas vəsaitlərin alınması və qurulması ilə bağlı xərclər, habelə kapital xarakterli digər xərclər istisna olmaqla) gəlirdən çıxılır.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 114)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('114',
+        'Amortizasiya ayırmaları və gəlirdən amortizasiya olunan aktivlər üzrə çıxılan məbləğlər',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.1',
+        'Bu Məcəllənin 99-cu maddəsində müəyyən edilmiş sahibkarlıq və qeyri-sahibkarlıq fəaliyyətində istifadə edilən əsas vəsaitlər üzrə amortizasiya ayırmaları bu maddənin müddəalarına uyğun olaraq gəlirdən çıxılır. Üfüqi monitorinqə qəbul edilən vergi ödəyiciləri tərəfindən amortizasiya ayırmaları düz xətt və ya azalan qalıq dəyəri metodu ilə, digər vergi ödəyiciləri tərəfindən isə yalnız azalan qalıq dəyəri metodu ilə (qeyri-maddi aktivlər üzrə amortizasiya ayırmaları istisna olmaqla) hesablanır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2',
+        'Torpaq, incəsənət əsərləri, nadir tarixi və memarlıq abidələri olan binalar, qurğular (tikililər) və bu maddə ilə müəyyən edilən köhnəlməyə məruz qalmayan digər aktivlər amortizasiya olunmur:',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.1',
+        'elmi-tədqiqat, tədris və təcrübə məqsədi üçün kabinetlərdə və laboratoriyalarda istifadə edilən avadanlıqlar, eksponatlar, nümunələr, fəaliyyətdə olan və olmayan modellər, maketlər və başqa əyani vəsaitlər;',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.2',
+        'məhsuldar heyvanlar (damazlıq inəklər, camışlar, madyanlar, dəvələr, marallar, donuzlar, qoyunlar, keçilər, döllük buğalar, kəllər, ayğırlar, nərlər, qabanlar, qoçlar, təkələr və bunlar kimi digər məhsuldar heyvanlar);',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.3',
+        'heyvanxanalarda və digər analoji müəssisələrdə olan heyvanat aləminin eksponatları;',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.4',
+        'istismar vaxtı çatmayan çoxillik əkmələr;',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.5',
+        'kitabxana fondları, kinofondlar (video, audio, foto), səhnə rekvizitləri, muzey sərvətləri (eksponatları);',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.6',
+        'tam amortizasiya olunmuş əsas vəsaitlər, onlar istismara yararlı olduğu hallarda;',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.7',
+        'konservasiya edilmiş əsas vəsaitlər;',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.8',
+        'ümumi istifadədə olan avtomobil yolları;',
+        10, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.9',
+        'ümumi istifadədə olan parklardakı avadanlıqlar;',
+        11, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.2.10',
+        'istismara verilməmiş anbarda olan əsas vəsaitlər.',
+        12, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3',
+        'Amortizasiya olunan aktivlər üzrə azalan qalıq dəyəri metodu (bu Məcəllənin 114.3.6-cı maddəsinə münasibətdə düz xətt metodu) ilə illik amortizasiya normaları aşağıdakı kimi müəyyən edilir:',
+        13, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.1',
+        'torpaqların yaxşılaşdırılması üzrə kapitallaşdırılmış xərclər, binalar, tikililər və qurğular - 7 faizədək;',
+        14, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.2',
+        'maşınlar və avadanlıq – 20%-dək;',
+        15, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.2-1',
+        'yüksək texnologiyalar məhsulu olan hesablama texnikası üzrə – 25 faizədək;',
+        16, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.3',
+        'nəqliyyat vasitələri - 25 faizədək;',
+        17, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.4',
+        'iş heyvanları - 20 faizədək;',
+        18, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.5',
+        'geoloji-kəşfiyyat işlərinə və təbii ehtiyatların hasilatına hazırlıq işlərinə çəkilən xərclər - 25 faizədək;',
+        19, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.6',
+        'qeyri-maddi aktivlər - istifadə müddəti məlum olmayanlar üçün 10 faizədək, istifadə müddəti məlum olanlar üçün isə illər üzrə istifadə müddətinə mütənasib məbləğlərlə;',
+        20, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.7',
+        'digər əsas vəsaitlər - 20 faizədək;',
+        21, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3.8',
+        'Çıxarılmışdır.',
+        22, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1',
+        'Amortizasiya olunan aktivlər üzrə düz xətt metodu ilə illik amortizasiya normaları aşağıdakı kimi müəyyən edilir:',
+        23, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.1',
+        'torpaqların yaxşılaşdırılması üzrə kapitallaşdırılmış xərclər, binalar, tikililər və qurğular – 44 il;',
+        24, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.2',
+        'maşın və avadanlıqlar – 14 il;',
+        25, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.3',
+        'yüksək texnologiyalar məhsulu olan hesablama texnikası – 11 il;',
+        26, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.4',
+        'hava, dəmiryol və su nəqliyyatı vasitələri – 29 il;',
+        27, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.5',
+        'istehsalat, idman maşınları, idman motosikletləri, idman velosipedləri və bu kimi başqa idman nəqliyyat vasitələri – 9 il;',
+        28, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.6',
+        'xidməti nəqliyyat vasitələri – 19 il;',
+        29, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.7',
+        'avtonəqliyyat vasitələri – 14 il;',
+        30, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.8',
+        'iş heyvanları – 14 il;',
+        31, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.9',
+        'geoloji-kəşfiyyat işlərinə və təbii ehtiyatların hasilatına hazırlıq işlərinə çəkilən xərclər – 11 il;',
+        32, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.10',
+        'qeyri-maddi aktivlər – istifadə müddəti məlum olmayanlar üçün 10 il, istifadə müddəti məlum olanlar üçün isə istifadə illərinə uyğun olaraq;',
+        33, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-1.11',
+        'digər əsas vəsaitlər – 14 il.',
+        34, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-2',
+        'Mikro sahibkarlıq subyektləri sahibkarlıq fəaliyyətində istifadə etdikləri əsas vəsaitlərə münasibətdə amortizasiya ayırmalarını bu Məcəllənin 114.3-cü maddəsi ilə müəyyən edilən amortizasiya normalarına 2 əmsal tətbiq etməklə gəlirdən çıxmaq hüququna malikdirlər.',
+        35, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.3-3',
+        'Kiçik sahibkarlıq subyektləri sahibkarlıq fəaliyyətində istifadə etdikləri əsas vəsaitlərə münasibətdə amortizasiya ayırmalarını bu Məcəllənin 114.3-cü maddəsi ilə müəyyən olunmuş amortizasiya normalarına 1,5 əmsal tətbiq etməklə gəlirdən çıxmaq hüququna malikdirlər.',
+        36, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.4',
+        'Əsas vəsaitlərin kateqoriyaları üzrə azalan qalıq dəyəri metodu ilə amortizasiya ayırmaları bu Məcəllənin 114.3-cü maddəsi ilə hər kateqoriyaya aid olan əsas vəsaitlər üçün müəyyənləşdirilmiş amortizasiya normasını həmin kateqoriyaya aid əsas vəsaitlərin vergi ilinin sonuna balans üzrə qalıq dəyərinə tətbiq etməklə hesablanır. Hər hansı kateqoriyaya aid olan əsas vəsaitlər üzrə vergi ili üçün müəyyən olunmuş amortizasiya normalarından aşağı norma tətbiq olunduqda, bunun nəticəsində yaranan fərq növbəti vergi illərində amortizasiyanın gəlirdən çıxılan məbləğinə əlavə oluna bilər.',
+        37, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.5',
+        'Azalan qalıq dəyəri metodu ilə amortizasiya ayırmaları binalar, tikililər və qurğular (bundan sonra - tikililər) üçün hər tikili üzrə ayrılıqda, düz xətt metodu ilə amortizasiya ayırmaları isə hər bir amortizasiya olunan aktiv üzrə ayrılıqda aparılır.',
+        38, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.6',
+        'Azalan qalıq dəyəri metodu ilə amortizasiya hesablanması məqsədləri üçün əsas vəsaitlər (vəsait) üzrə vergi ilinin sonuna qalıq dəyəri aşağıdakı qaydada müəyyənləşdirilən (lakin sıfırdan aşağı olmayan) məbləğdən ibarət olur: əsas vəsaitlərin (vəsaitin) əvvəlki ilin sonuna qalıq dəyərinə (həmin il üçün hesablanmış amortizasiya məbləği çıxıldıqdan sonra qalan dəyər) bu Məcəllənin 143-cü maddəsinə uyğun olaraq cari ildə daxil olmuş əsas vəsaitlərin (vəsaitin) dəyəri, habelə cari ildə bu Məcəllənin 115-ci maddəsinə əsasən müəyyən edilən təmir xərclərinin məhdudlaşdırmadan artıq olan hissəsi əlavə edilir, vergi ilində təqdim edilmiş, ləğv edilmiş və ya qalıq dəyəri 500 manatdan və ya ilkin dəyərin 5 faizindən az olduqda əsas vəsaitlərin qalıq dəyəri çıxılır. Əsas vəsaitlərin (vəsaitin) yenidən qiymətləndirilməsindən yaranan artım (yenidən qiymətləndirilmə nəticəsində yaranan müsbət fərq) amortizasiya hesablanması məqsədləri üçün əsas vəsaitlərin (vəsaitin) vergi ilinin sonuna qalıq dəyərinə əlavə olunmur.',
+        39, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.7',
+        'Əsas vəsaitlərin (vəsaitin) təqdim edilməsindən əldə olunan məbləğ həmin əsas vəsaitlərin (vəsaitin) qalıq dəyərindən artıqdırsa, yaranmış fərq gəlirə daxil edilir.',
+        40, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.8',
+        'Azalan qalıq dəyəri metodu ilə amortizasiya hesablanması zamanı ilin sonuna əsas vəsaitin qalıq dəyəri 500 manatdan və ya ilkin dəyərinin 5 faizindən az olduqda, qalıq dəyərinin məbləği gəlirdən çıxılır.',
+        41, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.9',
+        'Əsas vəsaitlərin (vəsaitin) təqdim edilməsindən əldə olunan məbləğ, həmin əsas vəsaitlərin (vəsaitin) qalıq dəyərindən azdırsa, yaranmış fərq gəlirdən çıxılır.',
+        42, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.10',
+        'Bu maddənin digər müddəalarından asılı olmayaraq, dövlət büdcəsinin dövlət əsaslı vəsait qoyuluşu xərclərindən (investisiya xərcləri) dövlət müəssisələrinə 2026-cı il 1 yanvar tarixədək ayrılaraq nizamnamə kapitalına aid edilmiş vəsaitlər, habelə 2026-cı il yanvarın 1-dən sonrakı dövrdə bu Məcəllənin 104.9-cu maddəsində müəyyən edilmiş meyarlara cavab verən investisiya layihələri üzrə dövlət büdcəsinin dövlət investisiya proqramı çərçivəsində ayrılan vəsaitlər hesabına alınan və ya quraşdırılan aktivlər üzrə bu Məcəllənin 114.3-cü maddəsinə uyğun olaraq hesablanmış amortizasiyanın yalnız 40 faizi gəlirdən çıxılır.',
+        43, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.11',
+        'Üfüqi monitorinqə qəbul edilən vergi ödəyiciləri tərəfindən amortizasiya ayırmalarının hesablanması və gəlirdən çıxılması aşağıdakı qaydada həyata keçirilir:',
+        44, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.11.1',
+        'üfüqi monitorinqə qəbul edilən vergi ödəyiciləri cari il ərzində amortizasiya ayırmalarının hesablanması üçün iki mümkün amortizasiya metodundan birini seçir və aprel ayının 15-dək bu barədə vergi orqanına məlumat verir. Vergi ödəyiciləri tərəfindən seçilmiş amortizasiya metodu 3 il ərzində dəyişdirilmir. İl ərzində aprel ayının 15-dək ləğv edilən vergi ödəyiciləri tərəfindən əvvəlki ildəki amortizasiya metodu tətbiq edilir;',
+        45, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.11.2',
+        'azalan qalıq dəyəri metodu ilə amortizasiya ayırmalarının hesablanması, bu Məcəllənin 115.9-cu maddəsi nəzərə alınmaqla, bu Məcəllənin 114-cü maddəsinə uyğun olaraq həyata keçirilir. Əsas vəsaitlər üzrə amortizasiyanın azalan qalıq dəyəri metodundan düz xətt metoduna keçid zamanı illik amortizasiya məbləği həmin əsas vəsaitlərin keçid tarixinə olan qalıq dəyərinin həmin tarixə qalan istifadə müddətinə bölünməsi yolu ilə hesablanır;',
+        46, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.11.3',
+        'düz xətt metodu ilə illik amortizasiya məbləğləri həmin əsas vəsaitlərin ilkin dəyərinin onların bu Məcəllənin 114.3-1-ci maddəsi ilə müəyyən olunmuş istifadə müddətlərinə bölünməsi yolu ilə hesablanır. Bu metodun tətbiqi zamanı həmin əsas vəsaitlər üzrə bu Məcəllənin 115.9-cu maddəsi ilə müəyyən edilmiş əsaslı təmir xərcləri və cari təmir xərclərinin məhdudlaşdırmadan artıq olan hissəsi onların ilkin dəyərinə əlavə edilir və bu qaydada formalaşan ilkin dəyər əsas vəsaitin bu Məcəllənin 114.3-1-ci maddəsi ilə müəyyən olunmuş istifadə müddətinə bölünməklə əldə olunan məbləğ əsas vəsaitin təmir olunduğu ildən etibarən hər il üzrə bərabər hissələrlə gəlirdən çıxılır;',
+        47, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.11.4',
+        'düz xətt metodundan azalan qalıq dəyəri metoduna keçid zamanı illik amortizasiya məbləği həmin əsas vəsaitlərin qalıq dəyərinin bu Məcəllənin 114.3-cü maddəsinə uyğun olaraq müəyyən edilmiş amortizasiya normasına vurulması ilə hesablanır;',
+        48, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.11.5',
+        'vergi ödəyicisində üfüqi monitorinqin keçirilməsi dayandırıldıqda və ya vergi ödəyicisi üfüqi monitorinqdən çıxarıldıqda həmin hesabat ilində amortizasiya ayırmaları bu Məcəllənin 114.11.2-ci maddəsinə uyğun olaraq hesablanır;',
+        49, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '114'), '114.11.6',
+        'amortizasiyanın düz xətt metodunun tətbiqi zamanı amortizasiya hesablanması məqsədləri üçün əsas vəsaitlərin ilkin dəyərinə bu Məcəllənin 115.9-cu maddəsi ilə müəyyən edilmiş əsaslı təmir xərcləri və cari təmir xərclərinin məhdudlaşdırmadan artıq olan hissəsi əlavə edilir. Əsas vəsaitlərin (vəsaitin) yenidən qiymətləndirilməsindən yaranan artım (yenidən qiymətləndirilmə nəticəsində yaranan müsbət fərq) amortizasiya hesablanması məqsədləri üçün əsas vəsaitlərin (vəsaitin) ilkin dəyərinə əlavə olunmur.',
+        50, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 115)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('115',
+        'Təmirlə bağlı xərclərin gəlirdən çıxılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.1',
+        'Hər il üçün gəlirdən çıxılmalı olan təmir xərclərinin məbləği əsas vəsaitlərin hər bir kateqoriyasının əvvəlki ilin sonuna balans üzrə qalıq dəyərinə müvafiq olaraq bu Məcəllənin 114.3.1-ci maddəsində göstərilən əsas vəsaitlərin kateqoriyasının ilin sonuna qalıq dəyərinin 2 faizi, 114.3.2-ci, 114.3.2-1-ci və 114.3.3-cü maddələrində göstərilən əsas vəsaitlərin (yük avtomobilləri istisna olmaqla) kateqoriyasının ilin sonuna qalıq dəyərinin 5 faizi, yük avtomobillərinin ilin sonuna qalıq dəyərinin 8 faizi, 114.3.7-ci maddəsində göstərilən əsas vəsaitlərin kateqoriyasının ilin sonuna qalıq dəyərinin 3 faizi və köhnəlmə (amortizasiya) hesablanmayan əsas vəsaitlər üzrə sıfır (0) faizi həddi ilə məhdudlaşdırılır. Təmir xərclərinin faktiki məbləği bu hədd ilə müəyyənləşdirilən məbləğdən az olduqda, gəlirdən təmir xərclərinin faktiki məbləği çıxılır. Bu halda növbəti vergi illərində təmir xərclərinin gəlirdən çıxılan məbləğ həddi təmir xərclərinin faktiki məbləği ilə müəyyənləşdirilmiş hədd üzrə hesablanmış məbləği arasındakı fərq qədər artırılır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.2',
+        'Bu Məcəllənin 115.1-ci maddəsində müəyyən edilən məhdudlaşdırmadan artıq olan məbləğ cari vergi ilinin sonuna əsas vəsaitlərin (vəsaitin) qalıq dəyərinin artmasına aid edilir. Amortizasiya olunmayan, köhnəlmə (amortizasiya) hesablanmayan əsas vəsaitlərin təmirinə çəkilmiş xərclər (torpaqların yaxşılaşdırılmasına çəkilən xərclər istisna olmaqla) gəlirdən çıxılmır və onların balans dəyərini artırır. Torpaqların yaxşılaşdırılmasına çəkilən xərclər kapitallaşdırılaraq bu Məcəllənin 114.3.1-ci və 114.3-1.1-ci maddələrinə uyğun olaraq amortizasiya olunur.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.3',
+        'İcarəyə götürülmüş əsas vəsaitlər üzrə təmir xərclərinin gəlirdən çıxılması bu Məcəllənin 115.4 - 115.6-1-ci maddələrinə uyğun olaraq müəyyən edilir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.4',
+        'icarəyə götürülmüş əsas vəsaitlərin təmiri üzrə xərclərin gəlirdən çıxılan məbləği əsas vəsaitlərin hər bir kateqoriyasının əvvəlki ilin sonuna qalıq dəyərinin bu Məcəllənin 115.1-ci maddəsi ilə müəyyən edilən faiz həddi ilə məhdudlaşdırılır.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.5',
+        'Əsas vəsaitlərin icarəyə götürülməsi müddətləri, şərtləri, habelə onların təmiri üzrə xərclər qanunvericilikdə nəzərdə tutulmuş qaydada icarəyə verənlə icarəçi arasında bağlanılan müqavilədə razılaşdırılır.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.6',
+        'İcarəyə götürülmüş əsas vəsaitlər icarəçinin balansında uçota alınmadıqda və ya təmir işləri icarəyə verənin hesabına aparıldıqda, yaxud icarəçinin hesabına aparılaraq, icarə haqqı ilə əvəzləşdirildikdə bu Məcəllənin 115.4-cü maddəsinin müddəaları icarəçiyə tətbiq edilmir.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.6-1',
+        'İcarəçinin balansında uçota alınmayan əsas vəsaitlərin təmirinə çəkilən və icarə haqqı ilə əvəzləşdirilməyən, yaxud icarəyə verən tərəfindən əvəzi ödənilməyən xərclər bağlanmış müqavilə müddəti ərzində, lakin 5 ildən az olmayaraq, illər üzrə mütənasib məbləğlərdə amortizasiya olunmaqla gəlirdən çıxılır. İcarəyə götürülmüş əsas vəsaitlərin təmirinə çəkilən xərclər hər il üzrə ayrıca olaraq kapitallaşdırılır və bu maddə ilə müəyyən edilmiş qaydada amortizasiya olunur.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.7',
+        'Əsas vəsaitlərin hər bir kateqoriyasının ilin sonuna qalıq dəyəri sıfıra bərabər olduqda, təmir xərclərinin faktiki məbləği müvafiq kateqoriyaya aid əsas vəsaitlərin qalıq dəyərinə aid edilir və bu Məcəllənin müddəalarına uyğun olaraq amortizasiya hesablanır.',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.8',
+        'Bu Məcəllənin müddəaları yalnız təmir xərclərinin gəlirdən çıxılan məbləğini məhdudlaşdırır və vergi ödəyicilərinin digər mənbələr hesabına təmir işlərini həyata keçirməsini qadağan etmir.',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '115'), '115.9',
+        'Bu Məcəllənin 38-1-ci maddəsinə uyğun olaraq üfüqi monitorinqə qəbul olunmuş vergi ödəyiciləri tərəfindən müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqanın (qurumun) müəyyən etdiyi qaydada aparılan əsaslı təmir xərcləri və bu Məcəllənin 115.1-ci maddəsində müəyyən edilən məhdudlaşdırmadan artıq olan cari təmir xərcləri üzrə məbləğlər cari vergi ilinin sonuna əsas vəsaitlərin qalıq dəyərinin artmasına aid edilir. Həmin vergi ödəyiciləri tərəfindən norma daxilində çəkilmiş cari təmir xərcləri bu Məcəllənin 115.1-115.8-ci maddələrinin tələblərinə uyğun olaraq gəlirdən çıxılır.',
+        10, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 116)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('116',
+        'Sığorta haqlarının gəlirdən çıxılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '116'), '116.1',
+        'Öz işçilərinin xeyrinə əmlakın zərərdən sığortalanması, habelə xarici sığortaçılar ilə bağlanmış həyat sığortası müqavilələri üzrə sığorta haqları istisna olmaqla, sığorta haqları üzrə, həmçinin təkrarsığorta müqavilələrinə münasibətdə təkrarsığorta haqları üzrə öhdəliklər gəlirdən çıxılır. Sığorta müqaviləsinin müddəti bir neçə hesabat dövrünü əhatə edirsə çəkilən sığorta haqqı xərcləri həmin hesabat dövrləri üzrə onun hesablanması qaydasına müvafiq surətdə bölüşdürülür.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '116'), '116.2',
+        'Fiziki şəxsin Azərbaycan Respublikası sığortaçıları ilə 3 ildən az olmayan müddətə bağlanmış və sığorta ödənişinin sığorta müqaviləsinin qüvvəyə mindiyi andan etibarən 3 illik müddət keçdikdən sonra verilməsini nəzərdə tutan həyatın yığım sığortası və pensiya sığortası üzrə bağladığı sığorta müqavilələri əsasında vergiyə cəlb olunan gəlirlərinin 50 faizindən çox olmayan hissəsindən hesablayıb ödədiyi sığorta haqları vergitutma məqsədləri üçün işəgötürən tərəfindən həmin fiziki şəxsin muzdlu işlə əlaqədar alınan gəlirindən çıxılır. İşəgötürən tərəfindən fiziki şəxsin muzdlu işlə əlaqədar alınan gəlirindən çıxılan həyatın yığım sığortası və pensiya sığortası üzrə ödədiyi sığorta haqları yalnız bank vasitəsilə sığortaçının bank hesabına ödənildikdə çıxılır.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '116'), '116.3',
+        'Bu Məcəllənin 116.2-ci maddəsində nəzərdə tutulan sığorta müqaviləsinə vaxtından əvvəl xitam verildikdə, ödənilmiş sığorta haqları sığortaçı tərəfindən ödəmə mənbəyində vergiyə cəlb olunur.',
+        3, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 117)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('117',
+        'Geoloji-kəşfiyyat işlərinə və təbii ehtiyatların hasilatına hazırlıq işlərinə çəkilən xərclərin gəlirdən çıxılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '117'), '117.1',
+        'Geoloji-kəşfiyyat işlərinə və təbii ehtiyatların hasilatına hazırlıq işlərinə çəkilən xərclər bu Məcəllənin 114-cü maddəsi ilə müəyyən edilmiş amortizasiya dərəcəsi ilə hesablanan amortizasiya ayırmaları şəklində ümumi gəlirdən çıxılır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '117'), '117.2',
+        'Bu maddə vergi ödəyicisinin geoloji-kəşfiyyat işlərini aparmaq və təbii ehtiyatları emal, yaxud istismar etmək hüquqlarını əldə etmək üçün qeyri-maddi aktivlərə çəkdiyi xərclərə də tətbiq olunur.',
+        2, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 118)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('118',
+        'Qeyri-maddi aktivlərə çəkilən xərclərin gəlirdən çıxılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '118'), '118.1',
+        'Hüquqi və fiziki şəxslərin bir ildən artıq müddətə təsərrüfat fəaliyyətində istifadə etdikləri qeyri-maddi obyektlərə çəkilən xərclər qeyri-maddi aktivlərə aiddir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '118'), '118.2',
+        'Qeyri-maddi aktivlərə çəkilən xərclər bu Məcəllənin 114-cü maddəsi ilə müəyyən edilən amortizasiya dərəcəsi ilə hesablanan amortizasiya ayırmaları şəklində gəlirdən çıxılır.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '118'), '118.3',
+        'Qeyri-maddi aktivlərin alınmasına və ya istehsalına çəkilən xərclər vergi ödəyicisinin vergiyə cəlb olunan gəlirinin hesablanması zamanı gəlirdən çıxılmışdırsa, həmin xərclər amortizasiya olunmalı qeyri-maddi aktivlərin dəyərinə aid edilmir.',
+        3, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 119)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('119',
+        'Gəlirdən çıxılan məbləğlərin məhdudlaşdırılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '119'), '119.1',
+        'Aşağıdakı vergilərin, faizlərin, maliyyə sanksiyalarının və cərimələrin gəlirdən çıxılmasına yol verilmir:',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '119'), '119.1.1',
+        'Azərbaycan Respublikasının və ya digər dövlətlərin ərazilərində ödənilmiş mənfəət vergisi və ya gəlirdən hesablanan hər hansı digər vergi;',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '119'), '119.1.2',
+        'bu Məcəllə və digər qanunlarla müəyyən edilmiş qaydada hesablanmış faizlər, maliyyə sanksiyaları və inzibati cərimələr (gəlirin əldə edilməsi ilə bağlı mülki hüquq müqavilələri üzrə faizlər, dəbbə pulu (cərimə), icranın gecikdirilməsi ilə əlaqədar vurulmuş zərərin əvəzinin ödənilməsi və digər analoji cərimələr istisna olmaqla).',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '119'), '119.2',
+        'Nümayəndəlik xərclərinin, işçilərlə bağlı mənzil və yemək xərclərinin, eləcə də əmək şəraiti zərərli, ağır olan və yeraltı işlərdə çalışan işçilərə verilən müalicə-profilaktik yeməklərin, süd və ona bərabər tutulan digər məhsullar və vasitələrlə bağlı xərclərin gəlirdən çıxılması normaları və qaydası müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən müəyyən olunur.',
+        4, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 120)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('120',
+        'Əmlakın təqdim edilməsindən yaranan zərər',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '120'), '120',
+        'Fiziki şəxsin əmlakın təqdim edilməsindən (təsərrüfat fəaliyyəti üçün istifadə edilən əmlakdan və ya təqdim edilməsindən əldə olunan gəlirin vergidən azad edildiyi əmlakdan başqa) yaranan zərəri belə əmlakın təqdim edilməsindən əldə olunan gəliri hesabına kompensasiya edilir. Yaranmış zərər həmin ildə kompensasiya edilə bilmirsə, o, gələcək üç ilədək davam edən sonrakı dövrə keçirilir və belə əmlakın təqdim edilməsindən götürülən gəlir hesabına kompensasiya edilir.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 121)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('121',
+        'Zərərin keçirilməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '121'), '121.1',
+        'Müəssisənin gəlirlərdən çıxarılmasına yol verilən xərclərinin gəlirdən artıq olan hissəsi beş ilədək davam edən sonrakı dövrə keçirilir və illər üzrə məhdudiyyət qoyulmadan həmin illərin mənfəəti hesabına kompensasiya edilir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '121'), '121.2',
+        'Fiziki şəxsin - sahibkarlıq fəaliyyətindən əldə edilən ümumi gəlirindən çıxılmasına yol verilən xərclərinin belə ümumi gəlirdən artıq olan hissəsi digər gəlirlərdən çıxıla bilməz, lakin gələcək dövrlərdə sahibkarlıq fəaliyyətindən ümumi gəlir hesabına kompensasiya edilməsi üçün üç ilədək davam edən sonrakı dövrə keçirilə bilər.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '121'), '121.3',
+        'Bu Məcəllənin 157.3.3-cü maddəsində göstərilən hallar istisna olmaqla, vergi ödəyicisi mənfəət (gəlir) vergisinin ödəyicisi olduğu tarixədək yaranmış zərərlər, habelə bu Məcəllənin 114-cü və 115-ci maddələrində nəzərdə tutulan amortizasiya və təmir xərcləri normalarından aşağı norma tətbiq edilməsi nəticəsində yaranan və növbəti illərə keçirilən məbləğlər növbəti illərin gəlirləri hesabına kompensasiya edilmir. Vergi ödəyicisinin mənfəət (gəlir) vergisi üzrə güzəşt hüququ olduğu dövrdə amortizasiya və təmir xərcləri normalarından aşağı norma tətbiq edilməsi nəticəsində yaranan məbləğlər güzəşt hüququ başa çatdıqdan sonrakı illərin gəlirdən çıxılan məbləğlərinə əlavə edilmir.',
+        3, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 122)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('122',
+        'Ödəmə mənbəyində dividenddən vergi tutulması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '122'), '122.1',
+        'Rezident müəssisə tərəfindən ödənilən dividenddən ödəmə mənbəyində 5 faiz dərəcə ilə vergi tutulur.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '122'), '122.2',
+        'Dividendin faktiki sahibi olan fiziki və hüquqi şəxslərdən bu Məcəllənin 122.1-ci maddəsinə uyğun olaraq vergi tutulmuşdursa, dividendi alan fiziki və hüquqi şəxslərin həmin gəlirindən bir daha vergi tutulmur. Həmin gəlir yenidən dividend şəklində verilən zaman vergiyə cəlb olunmur.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '122'), '122.3',
+        'Neft-qaz ehtiyatlarının kəşfiyyatı, işlənməsi və hasilatın pay bölgüsü, ixrac boru kəmərləri haqqında və bu qəbildən olan digər sazişlər üzrə mənfəətin bölüşdürülməsi, habelə müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilmiş hallarda hüquqi şəxsin tam mülkiyyətində olan törəmə müəssisələrin xalis mənfəətinin həmin hüquqi şəxsin mərkəzləşdirilmiş fondunda cəmləşdirilməsi üzrə köçürmələr və bu şəxsin həmin gəliri vergiyə cəlb olunmur.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '122'), '122.4',
+        'Cəmiyyətin fəaliyyəti zamanı əldə edilmiş aktivlərin, o cümlədən pul vəsaitlərinin (təsisçiyə borcların verilməsi və ya alınmış borcların əvəzinin qaytarılması istisna olmaqla) təsərrüfat fəaliyyətinin məqsədlərindən kənar digər məqsədlər üçün təsisçiyə verilməsi, habelə təsisçinin digər şəxslərə olan borclarının əvəzinin ödənilməsi vergitutma məqsədləri üçün dividend ödəmələrinə bərabər hesab edilir və bu zaman bu Məcəllənin 122.1-ci maddəsi ilə ödəmə mənbəyində vergi tutulur.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '122'), '122.5',
+        'Texnologiyalar parkının rezidenti kimi texnologiyalar parkından kənar sistem inteqrasiyası, proqram təminatının hazırlanması və inkişaf etdirilməsi fəaliyyətini həyata keçirən şəxslər tərəfindən ödənilən dividenddən texnologiyalar parkının qeydiyyat şəhadətnaməsinin alındığı hesabat ilindən başlayaraq 10 il müddətinə ödəmə mənbəyində vergi tutulmur.',
+        5, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 123)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('123',
+        'Ödəmə mənbəyində faizlərdən vergi tutulması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '123'), '123.1',
+        'Rezident fiziki şəxsə, qeyri-rezident fiziki şəxsin Azərbaycan Respublikasındakı daimi nümayəndəliyinə (maliyyə lizinqini həyata keçirən fiziki şəxslər istisna olmaqla) və Azərbaycan Respublikasında daimi nümayəndəliyi olmayan qeyri-rezidentə rezident tərəfindən və ya qeyri-rezidentin daimi nümayəndəliyi tərəfindən, yaxud bu cür nümayəndəliyin adından ödənilən faizlərdən, o cümlədən maliyyə lizinqi əməliyyatları üzrə ödənilən ssuda faizlərindən, gəlir bu Məcəllənin 13.2.16-cı maddəsinə uyğun olaraq Azərbaycan mənbəyindən əldə edilmişdirsə, bu Məcəllənin 102.1.22-ci və 102.1.22-2-ci maddələrində nəzərdə tutulmuş güzəşt nəzərə alınmaqla ödəniş mənbəyində 10 faiz dərəcə ilə vergi tutulur. (123.1-ci maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '123'), '123.2',
+        'Faizlərin faktiki sahibi fiziki şəxsdirsə, bu Məcəllənin 123.1-ci və 123.4-cü maddələrinə uyğun olaraq vergi tutulmuş faizlər həmin fiziki şəxslərə ödənildikdən sonra onlardan bir daha vergi tutulmur.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '123'), '123.3',
+        'İstiqraz üzrə ödənilən diskont və faiz gəlirləri üzrə ödəmə mənbəyində vergi istiqraz mülkiyyətçisinin həmin istiqraza malik olduğu günlərin sayına mütənasib surətdə hesablanır.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '123'), '123.4',
+        'Həyatın yığım sığortası üzrə sığorta olunanın ödədiyi və ya onun xeyrinə ödənilən sığorta haqları ilə sığorta ödənişləri arasındakı fərq kimi alınan gəlirdən ödəniş mənbəyindən 10 faiz dərəcəsi ilə vergi tutulur.',
+        4, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 124)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('124',
+        'Ödəmə mənbəyində icarə (kirayə) haqlarından və royaltidən vergi tutulması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '124'), '124.1',
+        'Daşınan və daşınmaz əmlak üçün icarə haqqından, həmçinin rezidentin və ya qeyri-rezidentin Azərbaycan Respublikasındakı daimi nümayəndəliyinin ödədiyi və ya onun adından ödənilən royaltidən gəlir bu Məcəllənin 13.2.16-cı maddəsinə uyğun olaraq Azərbaycan mənbəyindən əldə edilmişdirsə, ödəmə mənbəyində 14 faiz dərəcə ilə vergi tutulur. Fiziki şəxslərə məxsus yaşayış sahələrinin (mehmanxanalar və mehmanxana tipli obyektlərdə yerləşən yerləşmə vasitələri istisna olmaqla) fiziki şəxslərə kirayəyə verilməsindən əldə olunan gəlirlərdən ödəmə mənbəyində 10 faiz dərəcə ilə vergi tutulur. İcarə (kirayə) haqqı vergi ödəyicisi kimi uçotda olmayan fiziki şəxs tərəfindən ödənildikdə icarəyə (kirayəyə) verən özü və ya onun təyin etdiyi vergi agenti bu maddəyə uyğun olaraq 14 faiz (icarəyə münasibətdə) və ya 10 faiz (kirayəyə münasibətdə) dərəcə ilə vergini ödəyir və bu Məcəllənin 33-cü və 149-cu maddələrinə uyğun olaraq vergi uçotuna alınıb bəyannamə verir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '124'), '124.2',
+        'İcarə (kirayə) haqqı və royaltidən gəlir əldə edən fiziki şəxslərdən bu Məcəllənin 124.1-ci maddəsinə uyğun olaraq vergi tutulmuşdursa və ya onun tərəfindən ödənilmişdirsə, həmin gəlirlərdən bir daha vergi tutulmur.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '124'), '124.3',
+        'Rezident müəssisələrə və ya qeyri-rezidentlərin daimi nümayəndəliklərinə Azərbaycan Respublikasında ödənilmiş məbləğlər bu maddə üzrə vergitutma obyekti deyildir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '124'), '124.4',
+        'Azərbaycan Respublikasında daşınmaz əmlakın (sahibkarlıq fəaliyyəti məqsədləri üçün istifadə olunmayan yaşayış fondu istisna olmaqla) vergitutma məqsədləri üçün aylıq icarə haqqının məbləği bu Məcəllənin 14-cü maddəsinə uyğun olaraq, bazar qiyməti nəzərə alınmaqla müəyyən edilir.',
+        4, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 125)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('125',
+        'Qeyri-rezidentin gəlirindən ödəmə mənbəyində vergi tutulması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1',
+        'Qeyri-rezidentin, bu Məcəllənin 13.2.16-cı maddəsi ilə Azərbaycan mənbəyindən əldə olunan gəliri kimi müəyyən edilən və qeyri-rezidentin Azərbaycan Respublikasının ərazisindəki daimi nümayəndəliyinə aid olmayan ümumi gəlirindən ödəmə mənbəyində xərclər çıxılmadan aşağıdakı dərəcələrlə vergi tutulur:',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.1',
+        'dividend - bu Məcəllənin 122-ci maddəsinə uyğun olaraq;',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.2',
+        'faizlər - bu Məcəllənin 123-cü maddəsinə uyğun olaraq;',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.3',
+        'rezident müəssisəsinin və ya sahibkarın lizinq, o cümlədən maliyyə lizinqi əməliyyatları üzrə ödəmələri, habelə riskin sığortasına və ya təkrar sığortasına dair müqaviləyə uyğun olaraq sığorta ödəmələri - 4 faiz;',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.4',
+        'Azərbaycan Respublikası ilə digər dövlətlər arasında beynəlxalq rabitə və ya beynəlxalq daşımalar həyata keçirilərkən rabitə və ya nəqliyyat xidmətləri üçün rezident müəssisənin və ya sahibkarın ödəmələri - 6 faiz. Azərbaycan Respublikasının hüdudlarından kənarda digər dövlətlərdəki təyinat (göndərilmə) məntəqələri arasında, habelə Azərbaycan Respublikasının ərazisindən tranzit qaydada həyata keçirilən daşımalara görə rezident müəssisənin və ya sahibkarın ödəmələri bu maddə üzrə vergitutuma obyekti deyildir;',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.5',
+        'bu Məcəllənin 125.1.1-ci – 125.1.4-cü, 125.1.6-cı – 125.1.8-ci və 125.1-1-ci maddələrində göstərilən gəlirlər istisna olmaqla, hüquqi şəxslərin və vergi ödəyicisi kimi uçota alınmış fiziki şəxslərin işlərin görülməsindən və ya xidmətlərin göstərilməsindən əldə edilən gəlirlər və Azərbaycan mənbəyindən əldə edilən digər gəlirlər üzrə ödəmələri – 10 faiz;',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.6',
+        'rezident müəssisəsinin və ya sahibkarın muzdlu işlə əlaqədar ödədiyi gəlir - bu Məcəllənin 101-ci maddəsində göstərilən dərəcələrlə;',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.7',
+        'icarə haqları və royalti (bu Məcəllənin 125.5-ci maddəsinin müddəaları nəzərə alınmaqla) - bu Məcəllənin 124-cü maddəsinə uyğun olaraq;',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.8',
+        'idman mərc oyunlarından, lotereyalardan, habelə digər yarışlardan və müsabiqələrdən pul şəklində əldə edilən uduşlardan (mükafatlardan) iştirakla bağlı ödənilən pul vəsaiti (pul qoyuluşu) çıxılmaqla qalan məbləğdən – bu Məcəllənin 101.5-cı maddəsinə uyğun olaraq.',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1.9',
+        'bu Məcəllənin 13.2.16.14-1-ci maddəsində göstərilən ödəmələr – 10 faiz.',
+        10, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.1-1',
+        'Azərbaycan Respublikasının rezidentləri tərəfindən qeyri-rezident şəxslərə məxsus elektron pul kisəsində yaradılan hesaba pul köçürülərkən, əməliyyatı həyata keçirən yerli ödəniş xidməti təchizatçısı və ya xarici ödəniş xidməti təchizatçısının yerli filialı həmin rezidentdən köçürülən məbləğin 10 faizi miqdarında ödəmə mənbəyində vergi tutur.',
+        11, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.2',
+        'Bu maddənin məqsədləri üçün qeyri-rezidentin Azərbaycan Respublikasındakı daimi nümayəndəliyi tərəfindən və ya onun adından aparılan ödəmələr rezident müəssisənin ödəmələrinə bərabər tutulur.',
+        12, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.3',
+        'Azərbaycan Respublikasının tərəfdar çıxdığı ikiqat vergitutmanın aradan qaldırılması haqqında beynəlxalq müqavilələrdə vergilərin aşağı dərəcəsi və ya vergilərdən tam azad olunma nəzərdə tutulduğu halda, ödəmə mənbəyində artıq tutulmuş vergi məbləği bu Məcəllənin 87.4-cü maddəsində müəyyən edilmiş qaydada geri qaytarılır.',
+        13, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.4',
+        'müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqanın (qurumun) müəyyən etdiyi qaydada müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən verilmiş təsdiqedici sənəd əsasında Azərbaycan Respublikasında keçirilən UEFA 2019 Avropa Liqasının final oyunu ilə əlaqədar UEFA-nın, onun yaratdığı qeyri-rezident hüquqi şəxslərin və qeyri-rezident futbol klublarının dividend və faiz gəlirlərinə, habelə UEFA 2020 Futbol çempionatı ilə əlaqədar UEFA-nı təmsil edən qurumların dividend gəlirlərinə bu maddənin müddəaları tətbiq edilmir.',
+        14, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '125'), '125.5',
+        'Mülki aviasiya fəaliyyətini həyata keçirən hüquqi şəxslər tərəfindən bu fəaliyyətin məqsədləri üçün Azərbaycan Respublikasında daimi nümayəndəlik yaratmayan qeyri-rezident şəxslərdən icarəyə və ya lizinqə (maliyyə lizinqi istisna olmaqla) götürülmüş hava gəmisinə və hava gəmisinin mühərrikinə görə aparılan ödənişlərdən ödəmə mənbəyində vergi tutulmur və həmin gəlir vergiyə cəlb edilmir. (125.5-ci maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        15, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 125-1)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('125-1',
+        'Güzəştli vergi tutulan ölkələrdə və ya ərazilərdə təsis edilmiş (qeydiyyatdan keçmiş) şəxslərə və güzəştli vergi tutulan ölkələrə və ya ərazilərə aparılan ödənişlərin ödəmə mənbəyində vergiyə cəlb edilməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '125-1'), '125-1',
+        'Bu Məcəllənin digər müddəalarından asılı olmayaraq, bu Məcəllənin 13.2.16.14-1-ci maddəsində göstərilən ödəmələrdən ödəmə mənbəyində 10 faiz dərəcə ilə vergi tutulur.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 126)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('126',
+        'Qeyri-rezidentin daimi nümayəndəliyinin xalis mənfəətindən ödəmə mənbəyində vergi tutulması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '126'), '126',
+        'Qeyri-rezidentin daimi nümayəndəliyindən mənfəət vergisindən əlavə olaraq bu daimi nümayəndəliyin xalis mənfəətindən həmin qeyri-rezidentə köçürdüyü (verdiyi) hər hansı məbləğdən 5 faiz dərəcə ilə vergi tutulur.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 127)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('127',
+        'Xarici ölkədə ödənilən verginin nəzərə alınması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '127'), '127.1',
+        'Rezidentin Azərbaycan Respublikasının hüdudlarından kənarda Azərbaycan mənbəyindən olmayan gəlirindən ödənilmiş gəlir vergisinin və ya mənfəət vergisinin məbləğləri Azərbaycanda vergi ödənilərkən nəzərə alınır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '127'), '127.2',
+        'Bu Məcəllənin 127.1-ci maddəsinə uyğun olaraq nəzərə alınan məbləğ Azərbaycan Respublikasında həmin gəlirdən və ya mənfəətdən müəyyən edilmiş dərəcələrlə tutulan verginin məbləğindən çox olmamalıdır.',
+        2, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 128)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('128',
+        'Güzəştli vergi tutulan ölkələr və ya ərazilər',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '128'), '128.1',
+        'Rezident güzəştli vergi tutulan ölkədə və ya ərazidə gəlir əldə edən qeyri-rezidentin nizamnamə fondunun 20 faizindən çoxuna bilavasitə və ya dolayısı ilə sahibdirsə, yaxud öz növbəsində onun səsvermə hüququ verən səhmlərinin 20 faizindən çoxunun sahibidirsə, rezidentin həmin gəliri onun vergi tutulan gəlirinə daxil edilir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '128'), '128.2',
+        'Güzəştli vergi tutulan xarici ölkə və ya ərazi dedikdə, aşağıdakı ölkələr və ya ərazilər başa düşülür:',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '128'), '128.2.1',
+        'vergi dərəcəsi bu Məcəllədə müəyyən edilmiş dərəcənin 75 faizi və ya daha aşağı hissəsinə bərabər olan ölkələr və ya ərazilər və (və ya);',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '128'), '128.2.2',
+        'Azərbaycan Respublikası ilə beynəlxalq müqavilələr çərçivəsində müvafiq standartlara uyğun məlumat mübadiləsini aparmayan ölkələr və ya ərazilər və (və ya);',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '128'), '128.2.3',
+        'maliyyə məlumatını, yaxud əmlakın faktiki sahibi və ya gəlir (mənfəət) götürən barədə sirri qorumaq imkanı verilmiş şirkətlər haqqında məlumatın məxfiliyinə dair qanunun mövcud olduğu ölkələr və ya ərazilər.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '128'), '128.3',
+        'Güzəştli vergi tutulan ölkələrin və ya ərazilərin siyahısı müvafiq icra hakimiyyəti orqanı tərəfindən təsdiq edilir.',
+        6, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 129)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('129',
+        'Vergi ili',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '129'), '129',
+        'Vergi ili təqvim ili sayılır.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 130)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('130',
+        'Gəlirin və xərcin uçotu qaydası',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.1',
+        'Vergi ödəyicisi vergi tutulan gəlirin (mənfəətin) dəqiq əks etdirilməsi üçün sənədləşdirilmiş məlumat əsasında gəlirlərinin və xərclərinin vaxtlı-vaxtında dəqiq uçotunu aparmağa, bu fəsilə uyğun şəkildə tətbiq edilən uçot metodundan asılı olaraq gəlirlərini və xərclərini onların əldə edildiyi və ya çəkildiyi müvafiq hesabat dövrlərinə aid etməyə borcludur. Vergi ödəyicisinin istifadə etdiyi uçot metodunda xərclərin və daxilolmaların müddətləri və uçotu qaydasına dair bütün tələblər nəzərə alınmalıdır. Gəlirlərin və xərclərin uçotunu hüquqi və fiziki şəxslər Azərbaycan Respublikasının müvafiq qanunvericiliyinə uyğun olaraq aparırlar. Vergitutma məqsədləri üçün gəlirlər və xərclər bu Məcəlləyə əsasən müəyyən edilir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.1-1',
+        'İqtisadi fəaliyyət sahələri üzrə vergitutma məqsədləri üçün gəlirlərin və xərclərin uçotunun aparılması qaydaları müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.2',
+        'Vergi ödəyicisi öz fəaliyyəti ilə bağlı olan bütün əməliyyatların başlanğıcını, gedişini və qurtarmasını müəyyənləşdirməyə imkan verən uçotun aparılmasını təmin etməyə borcludur.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.3',
+        'Bu maddədə başqa hallar nəzərdə tutulmamışdırsa, vergi tutulan gəlir bu Məcəllənin tələblərinə əməl etmək üçün zəruri düzəlişləri aparmaq şərti ilə vergi ödəyicisinin öz mühasibat uçotunda istifadə etdiyi metodla hesablanmalıdır.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.4',
+        'Mikro sahibkarlıq subyektləri öz seçimlərindən asılı olaraq, gəlirlərin və xərclərin uçotunu kassa metodu və ya hesablama metodu ilə, kiçik, orta və iri sahibkarlıq subyektləri isə hesablama metodu ilə aparırlar.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.5',
+        'Vergi ödəyicisinin istifadə etdiyi uçot metodu dəyişdirilərkən, verginin məbləğinə təsir göstərən mühasibat əməliyyatlarına düzəlişlər uçot metodunun dəyişdirildiyi ildə aparılmalıdır ki, bu əməliyyatlardan heç biri nəzərdən qaçırılmasın və ya iki dəfə hesaba alınmasın.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.6',
+        'Bina tikintisi fəaliyyəti ilə məşğul olan şəxslər tərəfindən yaşayış və qeyri-yaşayış sahələrinin təqdim edilməsi ilə bağlı gəlir və bu gəlirdən çıxılan xərclər vergi ili ərzində yerinə yetirilmiş işlər (mərhələlər) üzrə təqdim edilən yaşayış və qeyri-yaşayış sahələrinin ƏDV-siz məbləğləri ilə həmin sahələrin tikintisi ilə bağlı çəkilən məsrəflər, o cümlədən torpaq sahələrinin alınması ilə bağlı çəkilən məsrəflər əsasında müəyyən edilir. Uzunmüddətli müqavilələr üzrə gəlirlərin və gəlirdən çıxılan xərclərin hər hesabat ilinə düşən hissəsinin müəyyən edilməsi aşağıdakı qaydada aparılır:',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.6.1',
+        'tikintisi həyata keçirilən hər bir bina üzrə çəkilən xərclər bina üzrə ümumi qiymətləndirilən xərclərlə müqayisə edilir və faktiki çəkilən xərcin ümumi xərclərdə xüsusi çəkisi müəyyənləşdirilir;',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.6.2',
+        'həmin binadan təqdim edilmiş yaşayış və qeyri-yaşayış sahələrinin satış dəyəri bu Məcəllənin 130.6.1-ci maddəsinə əsasən müəyyən edilən həcm nisbətində vergi tutulan gəlirlərə aid edilir;',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.6.3',
+        'faktiki çəkilən xərclər gəlirdən çıxılan xərclərə aid edilir.',
+        10, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '130'), '130.7',
+        'Banklar və kredit təşkilatları tərəfindən Vətən müharibəsi iştirakçılarının və Vətən müharibəsində şəhid olmuş şəxslərin, habelə Vətən müharibəsi nəticəsində şəhid ailəsi statusu almış şəxslərin 2021-ci il 1 yanvar tarixinədək alınmış kreditlər üzrə həmin tarixədək ödənilməyən borclarına görə hesablanmış faizlərin silinməsi bankların və digər kredit təşkilatlarının vergi tutulan gəlirlərinə aid edilmir. Bu maddə ilə müəyyən edilmiş silinən borcların əsas məbləği üzrə yaradılmış ehtiyatlar gəlirdən çıxılan xərclərə aid edilir.',
+        11, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLES 131-139 (Fəsil X)
+-- ============================
+
+-- ============================
+-- TAX ARTICLE (Maddə 131)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('131',
+        'Kassa metodu ilə gəlirin və xərcin uçotu prinsipləri',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '131'), '131',
+        'Kassa metodu ilə uçot aparan vergi ödəyicisi gəliri əldə edəndə və ya gəlir onun sərəncamına veriləndə, bu gəliri nəzərə almalı və gəlirdən öz xərclərini yalnız bu xərcləri çəkdiyi zaman çıxmalıdır.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 132)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('132',
+        'Kassa metodundan istifadə olunarkən gəlirin əldə edilməsi vaxtı',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '132'), '132.1',
+        'Vergi ödəyicisinin nağd pul vəsaitini aldığı, nağdsız ödəmədə isə pul vəsaitinin bankda, digər kredit və ya elektron pul təşkilatında onun hesabına və ya sərəncamçısı ola biləcəyi hesaba, yaxud göstərilən vəsaiti almaq hüququna malik olacağı hesaba daxil olduğu vaxt gəlirin əldə edildiyi vaxt sayılır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '132'), '132.2',
+        'Vergi ödəyicisinin maliyyə öhdəliyinin ləğv edildiyi və ya ödənildiyi halda (qarşılıqlı hesablaşmalar aparıldıqda və sair bu kimi hallarda) öhdəliyin ləğv edildiyi və ya ödənildiyi vaxt gəlirin əldə edildiyi vaxt sayılır.',
+        2, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 133)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('133',
+        'Kassa metodundan istifadə olunarkən xərcin çəkilməsi vaxtı',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '133'), '133.1',
+        'Vergi uçotunun məqsədləri üçün vergi ödəyicisi kassa metodundan istifadə etdikdə, xərcin çəkilməsi vaxtı, əgər bu maddədə başqa hallar nəzərdə tutulmamışdırsa, xərcin faktiki çəkildiyi vaxt sayılır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '133'), '133.2',
+        'Vergi ödəyicisi pul vəsaitini ödəyirsə, nağd pul vəsaitinin ödənildiyi, nağdsız ödəmədə isə vergi ödəyicisinin pul vəsaitinin köçürülməsi haqqındakı tapşırığının bank, digər kredit və ya elektron pul təşkilatı tərəfindən alındığı vaxt xərcin çəkildiyi vaxt sayılır.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '133'), '133.3',
+        'Vergi ödəyicisi qarşısında maliyyə öhdəlikləri ləğv edildiyi və ya ödənildiyi halda (qarşılıqlı hesablaşmalar aparıldıqda və sairə bu kimi hallarda), öhdəliyin ləğv edildiyi və ya ödənildiyi vaxt xərcin çəkilməsi vaxtı sayılır.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '133'), '133.4',
+        'Borc öhdəlikləri üzrə faizlər ödənilərkən və ya əmlakın icarəyə götürülməsi müqabilində ödəmə həyata keçirilərkən, əgər borc öhdəliyinin və ya icarə müqaviləsinin müddəti bir neçə hesabat dövrünü əhatə edirsə, hesabat ilində gəlirdən çıxılmalı olan və faktiki ödənilən faizlərin (icarə haqqının) məbləği həmin il üçün hesablanan faizlərin (icarə haqqının) məbləği deməkdir.',
+        4, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 134)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('134',
+        'Hesablama metodundan istifadə edilərkən gəlirin və xərcin uçotu qaydası',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '134'), '134',
+        'Hesablama metodu ilə uçot aparan vergi ödəyicisi gəlir əldə edilməsinin və xərc çəkilməsinin faktiki vaxtından asılı olmayaraq gəlirini və xərcini müvafiq surətdə gəlir almaq hüququnun əldə edildiyi və ya xərcin çəkilməsi barədə öhdəliyin yarandığı vaxt nəzərə almalıdır.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 135)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('135',
+        'Hesablama metodundan istifadə olunarkən gəlirin əldə edilməsi vaxtı',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '135'), '135.1',
+        'Müvafiq məbləğ vergi ödəyicisinə qeyd-şərtsiz ödənilməlidirsə, yaxud vergi ödəyicisi əqd və ya müqavilə üzrə bütün öhdəliklərini yerinə yetirmişdirsə, bu vaxt gəliri almaq hüququ əldə edilmiş sayılır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '135'), '135.2',
+        'Vergi ödəyicisi müqavilə üzrə iş görürsə və ya xidmət göstərirsə, gəlir onu almaq hüququ müqavilədə nəzərdə tutulan işlərin görülməsinin və ya xidmətlərin göstərilməsinin tam başa çatdığı vaxtda əldə edilmiş sayılır.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '135'), '135.3',
+        'Vergi ödəyicisi gəlir əldə edirsə və ya onun faiz gəliri, yaxud əmlakın icarəyə verilməsindən gəlir əldə etmək hüququ vardırsa, borc öhdəliklərinin və ya icarə müqaviləsi üzrə ödəmənin müddətinin qurtardığı vaxt gəlir almaq hüququnun əldə edildiyi vaxt sayılır. Borc öhdəliyinin və ya icarə müqaviləsi üzrə ödəmənin müddəti bir neçə hesabat dövrünü əhatə edirsə, gəlir onun hesablanma qaydasına müvafiq surətdə həmin hesabat dövrləri üzrə bölüşdürülür.',
+        3, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 136)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('136',
+        'Hesablama metodundan istifadə edilərkən xərcin çəkilməsi vaxtı',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '136'), '136.1',
+        'Vergi ödəyicisi vergi uçotunun aparılması üçün hesablama metodundan istifadə etdikdə, əqdlə bağlı olan xərcin çəkilməsi vaxtı, bu maddədə başqa hallar nəzərdə tutulmamışdırsa, aşağıda sadalanan şərtlərin hamısına əməl edildiyi vaxt sayılır:',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '136'), '136.1.1',
+        'vergi ödəyicisi birmənalı olaraq maliyyə öhdəliklərini qəbul edir;',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '136'), '136.1.2',
+        'maliyyə öhdəliklərinin məbləği dəqiq qiymətləndirilir;',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '136'), '136.1.3',
+        'əqddə və ya müqavilədə iştirak edən bütün tərəflər əqd və ya müqavilə üzrə özlərinin bütün öhdəliklərini yerinə yetirmişlər, yaxud müvafiq məbləğlər qeyd-şərtsiz ödənilməlidir.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '136'), '136.2',
+        'Bu maddədə göstərilən maliyyə öhdəliyi əqdə və ya müqaviləyə müvafiq surətdə qəbul edilən elə öhdəlikdir ki, onun yerinə yetirilməsindən ötrü əqdin və ya müqavilənin digər iştirakçısı pul şəklində və ya digər şəkildə müvafiq vəsait verməli olsun.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '136'), '136.3',
+        'Borc öhdəliyi üzrə faizlər və ya əmlakın icarə haqqı ödənilərkən borc öhdəliyi və ya icarə müqaviləsi üzrə ödənişin müddəti bir neçə hesabat dövrünü əhatə edirsə, xərc həmin hesabat dövrləri üzrə onun hesablanma qaydasına müvafiq surətdə bölüşdürülür.',
+        6, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 137)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('137',
+        'Birgə fəaliyyətdən mənfəətin (gəlirin) bölüşdürülməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '137'), '137',
+        'Hüquqi şəxs yaratmadan birgə sahibkarlıq fəaliyyəti ilə məşğul olan şəxslər, həmin fəaliyyətdən əldə etdikləri birgə mənfəəti (xərclər çıxılmaqla gəliri) (bu fəaliyyətlə bağlı birgə xərci çıxmaqla) hesabladıqdan sonra, birgə sahibkarlıq fəaliyyətlərinə dair razılığa uyğun olaraq, vergiyə cəlb edilən mənfəəti (xərclər çıxılmaqla gəliri) bu fəaliyyətin iştirakçıları arasında bölürlər.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 138)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('138',
+        'Uzunmüddətli müqavilələr üzrə gəlir və gəlirdən çıxılan məbləğlər',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '138'), '138.1',
+        '«Uzunmüddətli müqavilə» - müqavilədə nəzərdə tutulan istehsal, quraşdırma və ya tikinti, yaxud bunlarla bağlı xidmətlərin və işlərin vergi ili ərzində başa çatdırılmadığı müqavilə deməkdir. Müqavilədə göstərilən işlərin başlandığı gündən 6 ay ərzində başa çatdırılmasını nəzərdə tutan müqavilələr uzunmüddətli müqavilələrə aid edilmir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '138'), '138.2',
+        'Vergi ödəyicisi hesablama metodu ilə uçot aparırsa, uzunmüddətli müqavilələrlə bağlı gəlir və bu gəlirdən çıxılan məbləğlər vergi ili ərzində müqavilələrin yerinə yetirilməsinin faktiki həcmlərinə uyğun olaraq uçota alınır.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '138'), '138.3',
+        'Müqavilənin yerinə yetirilməsinin faktiki həcmi vergi ili ərzində çəkilmiş xərcin həmin müqavilədə nəzərdə tutulan ümumi qiymətləndirilən xərclərlə müqayisə edilməsi yolu ilə müəyyənləşdirilir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '138'), '138.4',
+        'Bu Məcəllənin 138-ci maddəsinin müddəaları bina tikintisi fəaliyyəti üzrə sadələşdirilmiş vergi ödəyicilərinə şamil edilmir.',
+        4, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 139)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('139',
+        'Əmtəə-material ehtiyatlarının uçotu qaydası',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '139'), '139.1',
+        'Vergi ödəyicisi özünün mülkiyyətində olan və sonradan satılmaq, yaxud məhsul istehsalı, işlər görülməsi və ya xidmətlər göstərilməsində istifadə olunmaq üçün nəzərdə tutulan hər hansı malı əmtəə-material ehtiyatlarına aid etməyə borcludur.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '139'), '139.2',
+        'Əmtəə-material ehtiyatlarının uçotunu apararkən vergi ödəyicisi istehsal etdiyi, yaxud satın aldığı malların istehsal xərclərinə və ya satınalma qiymətlərinə əsasən müəyyənləşdirilən dəyərini uçotda əks etdirməyə borcludur. Vergi ödəyicisi bu malların saxlanmasına və nəql olunmasına çəkilən xərcləri də onların dəyərinə daxil etməlidir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '139'), '139.3',
+        'Əmtəə-material ehtiyatlarının uçotunu apararkən vergi ödəyicisi mənəvi cəhətdən köhnəlmiş və ya dəbdən düşmüş qüsurlu malın, yaxud digər səbəblər üzündən istehsalına çəkilmiş xərclərdən (satınalma qiymətindən) yüksək qiymətə satıla bilməyən malın (məhsulun) dəyərini onların satıla biləcəyi qiyməti əsas götürməklə qiymətləndirə bilər.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '139'), '139.4',
+        'Vergi ödəyicisi onun ixtiyarında olan malların fərdi uçotunu aparmırsa, o, əmtəə-material ehtiyatlarının uçotunu orta maya dəyəri ilə qiymətləndirmə metodundan istifadə etməklə aparmaq hüququna malikdir.',
+        4, false, NOW(), NOW());
+-- ============================================================
+-- TAX ARTICLES 140-152 (Maddə 140-152)
+-- Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin
+-- mənfəət vergisinə aid olan maddələr
+-- ============================================================
+
+-- ============================
+-- TAX ARTICLE (Maddə 140)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('140',
+        'Maliyyə lizinqi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.1',
+        '(140-cı maddə adına Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)
+
+   Bu maddənin məqsədləri üçün maliyyə lizinqinin obyekti əsas vəsaitlərə aid edilən daşınar və daşınmaz əmlakdır. İcarəyə verən maddi əmlakı maliyyə lizinqi müqaviləsi üzrə icarəyə verirsə, vergitutma məqsədləri üçün icarəçi əmlakın sahibi, icarə ödəmələri isə icarəçiyə verilmiş ssuda üzrə ödəmələr sayılır. Maliyyə lizinqi müqaviləsi üzrə lizinq alan qismində yalnız hüquqi şəxslər və fərdi sahibkarlar çıxış edirlər.
+
+   (140.1-ci maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.2',
+        'Aşağıdakı şərtlər yerinə yetirildiyi hallarda əmlak icarəsi maliyyə lizinqi sayılır:',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.2.1',
+        'lizinq müqaviləsi ilə icarə müddəti qurtardıqdan sonra əmlakın mülkiyyətə verilməsi nəzərdə tutulur, yaxud icarə müddəti qurtardıqdan sonra icarəçi əmlakı müəyyən edilmiş və ya qabaqcadan güman edilən qiymətlərlə almaq hüququna malikdir, yaxud;
+
+   (140.2.1-ci maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.2.2',
+        'icarə müddəti icarəyə götürülən əmlakın istismar müddətinin 75 faizindən artıqdır, yaxud;',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.2.3',
+        'icarə müddəti qurtardıqdan sonra əmlakın Vergi Məcəlləsinə əsasən müəyyənləşdirilmiş qalıq dəyəri icarənin əvvəlinə onun bazar qiymətinin 20 faizindən azdır, yaxud;',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.2.4',
+        'icarə haqqının ödəniləcək məbləği əmlakın icarənin əvvəlinə olan bazar qiymətinin ən azı 90 faizinə bərabərdir və ya ondan artıqdır.
+
+   (140.2.4-cü maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.2.5',
+        'icarəyə götürülən əmlak icarəçi üçün sifarişlə hazırlanmışdır və icarə müddəti qurtardıqdan sonra icarəçidən başqa heç kəs tərəfindən istifadə edilə bilməz.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.3',
+        'Bu Məcəllənin 140.2.4-cü maddəsi aktivin istifadə olunması müddətinin 3/4-ü qurtardıqdan sonra başlanan icarəyə tətbiq edilmir.',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.4',
+        'Maliyyə lizinqi müqaviləsində ssuda ödəmələri üzrə faiz dərəcəsi göstərilmədikdə və ya maliyyə lizinqi həyata keçirən qeyri-rezidentlərə, habelə qarşılıqlı surətdə asılı şəxslərə maliyyə lizinqi üzrə icarə ödəmələrinin cari dəyərini müəyyənləşdirməkdən ötrü istifadə edilən faiz dərəcəsi ödəmələr aid olduğu dövrdə eyni valyuta ilə, oxşar müddətə verilmiş banklararası kredit hərracında olan və ya hərraclar keçirilmədiyi təqdirdə banklararası kreditlər üzrə faizlərin orta səviyyəsinin 125 faizi məbləğində götürülür.
+
+   (140.4-cü maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.5',
+        'Bu maddənin məqsədləri üçün icarəçinin icarəni təzələmək hüququna malik olduğu əlavə müddət icarə müddətinə daxildir.
+
+   (140.5-ci maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        10, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.6',
+        'İcarəyə verən maliyyə lizinqi başlananadək aktivin sahibi olduğu hallarda, bu Məcəllənin 140.1-ci maddəsində göstərilən ssudanın verilməsi rejiminə əlavə olaraq, əqd əmlakı icarəyə verənin satması və icarəçinin alması kimi qiymətləndirilir.
+
+   (140.6-cı maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        11, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '140'), '140.7',
+        'Maliyyə lizinqi müqaviləsinə vaxtından əvvəl xitam verildiyi halda əməliyyat bu Məcəllənin 140.2-ci maddəsinin tələblərinə cavab vermədiyi təqdirdə belə əməliyyat əmlakın icarəyə verilməsi olmaqla maliyyə lizinqi hesab edilmir. Bu zaman bu Məcəllənin 72.4-1-ci maddəsinə uyğun olaraq vergilərin dəqiqləşdirilməsi qiymətləndirmə bazasında dəyişikliyin baş verdiyi hesabat dövründə aparılır və hesabat dövrü üzrə vergi ödəyicisi tərəfindən təqdim edilmiş bəyannamədə dəqiqləşdirilir. Maliyyə lizinqi müqaviləsi üzrə lizinq alan bu müqavilə üzrə hüquq və öhdəliklərini digər şəxsə təqdim etdiyi halda lizinq verənlə yeni alıcı arasında yaranan münasibətlər maliyyə lizinqi sayılır və əvvəlki maliyyə lizinqi müqaviləsinin davamı hesab edilir.
+
+   (140.7-ci maddəyə Azərbaycan Respublikasının 2026-cı il 26 may tarixli 413-VIIQD nömrəli Qanunu ilə edilmiş dəyişiklik 2026-cı il dekabr 25-dən qüvvəyə minir.)',
+        12, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 141)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('141',
+        'Gəlirdən çıxılan məbləğlərin kompensasiya edilməsi və ehtiyatların azaldılması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '141'), '141.1',
+        'Əvvəllər gəlirdən çıxılmış xərc, zərər və ya şübhəli borc ödənilirsə, əldə edilən məbləğ onların ödənildiyi vaxtda gəlir sayılır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '141'), '141.2',
+        'Əvvəllər gəlirdən çıxılmış ehtiyat azalırsa, həmin ehtiyatın azalmış məbləği gəlirə daxil edilir.',
+        2, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 142)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('142',
+        'Aktivlər təqdim edilərkən gəlir və zərər',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '142'), '142.1',
+        'Aktivlərin təqdim edilməsindən əldə edilən gəlir, aktivlərin təqdim edilməsindən daxilolmalar və aktivlərin bu Məcəllənin 143-cü maddəsinə uyğun olaraq müəyyənləşdirilən dəyəri arasındakı müsbət fərq deməkdir. Aktivlərini əvəzsiz əsasla və ya güzəştli qiymətlə təqdim edən şəxsin gəliri bu qayda ilə təqdim edilən aktivin bazar qiyməti və onun bu Məcəllənin 143-cü maddəsinə uyğun olaraq müəyyənləşdirilən dəyəri arasındakı fərqdən ibarətdir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '142'), '142.2',
+        'Aktivlərin təqdim edilməsindən yaranan zərər aktivlərin təqdim edilməsindən daxilolmalar və həmin aktivlərin bu Məcəllənin 143-cü maddəsinə müvafiq surətdə müəyyənləşdirilən dəyəri arasındakı fərqdən ibarətdir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '142'), '142.3',
+        'Çıxarılmışdır.',
+        3, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 143)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('143',
+        'Aktivlərin dəyəri',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '143'), '143',
+        'Aktivlərin dəyərinə onların alınması, gətirilməsi, istehsalı, tikilməsi, quraşdırılması və qurulması üçün çəkilən xərclər, həmçinin vergi ödəyicisinin gəlirdən çıxmaq hüququna malik olduğu xərclər və əsas vəsaitlərin (vəsaitin) yenidən qiymətləndirilməsindən yaranan artım (yenidən qiymətləndirilmə nəticəsində yaranan müsbət fərq) istisna edilməklə, aktivlərin dəyərini artıran digər xərclər daxil edilir.
+
+   Aktivlər kreditlər hesabına alındığı halda, kredit faizləri aktivlərin dəyərini artırmır və bu Məcəllənin 108-ci maddəsinə uyğun olaraq gəlirdən çıxılır.',
+        1, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 144)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('144',
+        'Gəlirin və ya zərərin qəbul edilməməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.1',
+        'Vergi tutulan gəlir müəyyən edilərkən aşağıdakı hallarda gəlir və ya zərər nəzərə alınmır:',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.1.1',
+        'aktivlər ər və arvad arasında verildikdə;',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.1.2',
+        'aktivlər keçmiş ər-arvad arasında boşanma prosesində verildikdə;',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.1.3',
+        'aktivin ləğv edildiyi, yaxud özgəninkiləşdirildiyi ildən sonrakı ilin axırınadək daxilolmaları analoji aktivə və ya eyni xarakterli aktivə təkrar investisiya etməklə aktiv qərəzsiz, yaxud onun sahibinin iradəsindən asılı olmayaraq məhv edildikdə, ləğv olunduqda və ya özgəninkiləşdirildikdə;',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.1.4',
+        'hüquqi və fiziki şəxslər tərəfindən daşınar və daşınmaz əmlak, qeyri-maddi aktivlər, habelə əmlak kompleksi şəklində müəssisələr dövlət orqanlarına (qurumlarına), eləcə də siyahısı müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən təsdiq edilən ictimai və sosial məqsədlər üçün yaradılmış fondlara əvəzsiz olaraq verildikdə;',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.1.5',
+        'bu Məcəllənin 114.2-ci maddəsinə uyğun olaraq amortizasiya olunmayan aktivlərin alınması və ya quraşdırılması məqsədilə dövlət büdcəsindən ayrılan və aktivlərə aid edilən subsidiyalar;',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.1.6',
+        'bu Məcəllənin 114.10-cu maddəsi ilə müəyyən edilmiş qaydada amortizasiya olunan aktivlərin alınması və ya quraşdırılması məqsədilə dövlət büdcəsindən ayrılan və aktivlərə aid edilən subsidiyalar.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.2',
+        'Bu Məcəllənin 144.1.3-cü maddəsində göstərilən əvəzedici aktivin dəyəri əvəz olunan aktivin məhv edildiyi, ləğv olunduğu və ya təqdim edildiyi vaxtdakı ilk dəyəri nəzərə alınmaqla müəyyənləşdirilir.',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.3',
+        'Bu Məcəllənin 144.1.1-ci və ya 144.1.2-ci maddələrinə uyğun olaraq mənfəətin vergi məqsədləri üçün nəzərə alınmadığı əqdin nəticəsində alınan aktivin dəyəri əqd günündə onu verən tərəf üçün də aktivin dəyəri sayılır.',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '144'), '144.4',
+        'Çıxarılmışdır.',
+        10, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 145)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('145',
+        'Hüquqi şəxsin ləğv edilməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.1',
+        'Bu maddədə başqa hallar nəzərdə tutulmamışdırsa, hüquqi şəxsin ləğv edilməsi iştirakçıların həmin hüquqi şəxsdəki iştirak paylarının təqdim edilməsi sayılmır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.2',
+        'Hər hansı hüquqi şəxs ləğv edilirsə, həmin hüquqi şəxsin aktivi hüquqi şəxs olan iştirakçıya verilirsə və bilavasitə ləğv etmədən əvvəl iştirakçıya hüquqi şəxsdə iştirak payının 100 faizi məxsus olmuşdursa, belə halda:',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.2.1',
+        'aktivlərin verilməsi ləğv edilən hüquqi şəxs tərəfindən aktivlərin vergiyə cəlb olunan təqdim edilməsi sayılmır;',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.2.2',
+        'iştirakçı üçün verilən aktivlərin dəyəri ləğv edilən hüquqi şəxs üçün aktivlər verilənədək olan dəyərə bərabərdir;',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.2.3',
+        'bu Məcəllənin 13.2.15-ci maddəsinin müddəaları nəzərə alınmaqla, aktivlərin bölüşdürülməsi dividend sayılmır;',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.2.4',
+        'ləğv edilən hüquqi şəxsdə iştirak payının ləğv edilməsi zamanı heç bir gəlir və zərər nəzərə alınmır;',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.2.5',
+        'hər hansı kateqoriyaya aid olan əsas vəsaitlərin balans dəyəri həmin əsas vəsaitləri alan şəxsə keçir.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.3',
+        'Bu maddə bir kateqoriyaya aid olan əsas vəsaitlərin hamısının eyni vaxtda təqdim edildiyi hallar istisna edilməklə, bu Məcəllənin 114-cü maddəsinin müddəalarına uyğun olaraq kateqoriyalar üzrə amortizasiya olunan əsas vəsaitlərə tətbiq edilmir.',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '145'), '145.3',
+        'Bu Məcəllənin 145.2-ci maddəsi yalnız o halda tətbiq edilir ki, ləğvetmənin əsas məqsədinin vergidən yayınma olmadığı vergi orqanı tərəfindən təsdiq edilmiş olsun.',
+        9, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 146)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('146',
+        'Hüquqi şəxsin yaranması',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '146'), '146.1',
+        'Aktivlərin verilməsi aşağıdakı hallarda onların vergiyə cəlb olunan təqdim edilməsi sayılmır:',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '146'), '146.1.1',
+        'şəxs və ya şəxslər qrupu aktivləri hər hansı hüquqi şəxsə bu hüquqi şəxsdə iştirak payı əvəzinə verirsə (hər hansı öhdəlik götürməklə və ya götürməməklə);',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '146'), '146.1.2',
+        'şəxs və ya şəxslər qrupu bilavasitə mübadilədən sonra hüquqi şəxsdə iştirak paylarının 100 faizinə sahib olursa.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '146'), '146.2',
+        'Bu Məcəllənin 146.1-ci maddəsinin müddəaları şamil edilən aktivi alan iştirakçı üçün onun dəyəri aktivi verən iştirakçı üçün onun verilmə vaxtındakı dəyərinə bərabərdir və aktivin balans dəyəri onu alan şəxsə keçir.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '146'), '146.3',
+        'Bu Məcəllənin 146.1-ci maddəsində göstərilən mübadilə nəticəsində alınan iştirak payının dəyəri verilən hər hansı borcun məbləği çıxılmaqla verilən aktivlərin dəyərinə bərabərdir.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '146'), '146.4',
+        'Bu maddə bir kateqoriyaya aid olan əsas vəsaitlərin hamısının eyni vaxtda verildiyi hallar istisna edilməklə, bu Məcəllənin 114-cü maddəsinin müddəalarına uyğun olaraq kateqoriyalar üzrə amortizasiya olunan əsas vəsaitlərə tətbiq edilmir.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '146'), '146.4',
+        'Götürülmüş öhdəliklər verilən aktivlərin dəyərindən artıqdırsa, bu maddə həmin artıq məbləğə tətbiq edilmir.',
+        7, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 147)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('147',
+        'Hüquqi şəxsin yenidən təşkil edilməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.1',
+        'Yenidəntəşkilin iştirakçısı olan hüquqi şəxsə və ya hüquqi şəxslərə məxsus əmlakın və iştirak paylarının dəyəri həmin əmlakın və iştirak paylarının bilavasitə yenidəntəşkildən əvvəlki dəyəri ilə eynidir. Eynilə əsas vəsaitlərin hər hansı amortizasiya kateqoriyasına aid olan balans dəyəri həmin əsas vəsaitləri alan şəxsə keçir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.2',
+        'Yenidəntəşkilin iştirakçısı olan hüquqi şəxslər arasında əmlakın və iştirak paylarının verilməsinə əmlakın vergiyə cəlb olunan özgəninkiləşdirilməsi kimi baxılmır.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.3',
+        'Yenidəntəşkilin iştirakçısı olan rezident hüquqi şəxsin özünün iştirak paylarının bu yenidəntəşkilin iştirakçısı olan digər rezident hüquqi şəxsdəki iştirak payları ilə hər hansı mübadiləsi iştirak payının vergiyə cəlb olunan özgəninkiləşdirilməsi hesab edilmir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.4',
+        'Bu Məcəllənin 147.3-cü maddəsinə uyğun olaraq mübadilə edilən iştirak paylarının dəyəri ilkin iştirak paylarının dəyərinə bərabərdir.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.5',
+        'Yenidəntəşkilin iştirakçısı olan hüquqi şəxsin iştirak paylarının iştirakçı tərəf olan digər hüquqi şəxsdəki iştirak payının dəyişməsi ilə əlaqədar bölüşdürülməsi, yenidəntəşkildə iştirakçı tərəflər üçün dividend sayılmır.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.6',
+        'Bu Məcəllənin 147.5-ci maddəsində göstərilən ilk iştirak paylarının dəyəri bilavasitə bölüşdürmədən sonra ilk və bölüşdürülmüş iştirak payları arasında onların bazar dəyərinə mütənasib olaraq bölüşdürülür.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.7',
+        'Hüquqi şəxsin yenidəntəşkili:',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.7.1',
+        'iki və daha çox rezident hüquqi şəxsin birləşməsi;',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.7.2',
+        'rezident hüquqi şəxsin səsvermə hüququ olan iştirak paylarının 50 və ya daha çox faizinin və bütün digər iştirak paylarının dəyərinin 50 və ya daha çox faizinin yalnız yenidəntəşkilin iştirakçısı olan tərəfin iştirak payları ilə dəyişdirilməsi;',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.7.3',
+        'rezident hüquqi şəxsin aktivlərinin 50 və ya daha çox faizinin digər rezident hüquqi şəxs tərəfindən, yalnız yenidəntəşkildə iştirak edən tərəfin dividendlərinə münasibətdə imtiyazlı olmayıb səsvermə hüququ olan iştirak paylarına dəyişdirilməsi üçün əldə edilməsi;',
+        10, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.7.4',
+        'rezident hüquqi şəxsin iki və ya daha çox rezident hüquqi şəxsə ayrılması;',
+        11, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.7.5',
+        'ayırma yolu ilə yeni şəxs yaradılması;',
+        12, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.7.6',
+        'müəssisədə iştirak paylarının azı 50 faizinin sahibi olan hüquqi şəxs tərəfindən öz iştirak paylarının hamısının bu hüquqi şəxsin iştirakçılarına paylanması deməkdir.',
+        13, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.7',
+        'Bu Məcəllənin 147.7.1. - 147.7.6-cı maddələrinin müddəaları o şərtlə tətbiq olunur ki, birləşmənin, əldəetmənin, birləşdirmənin, ayrılmanın və ya ayırma yolu ilə yeni şəxs yaradılmasının əsas məqsədinin vergilərdən yayınma olmadığı vergi orqanı tərəfindən təsdiq edilmiş olsun.',
+        14, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.8',
+        'Yenidəntəşkilin bilavasitə iştirakçısı olan hər hansı rezident hüquqi şəxs və yenidəntəşkilin bilavasitə iştirakçısı olan rezident hüquqi şəxsin sahibi olan, yaxud bu cür şəxsə mənsub olan hər hansı hüquqi şəxs yenidəntəşkilin iştirakçısı sayılır.',
+        15, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.9',
+        'Bu Məcəllənin 147.8-ci maddəsinin məqsədləri üçün hüquqi şəxsin sahibi hüquqi şəxsdə səsvermə hüququ olan iştirak paylarının 50 və ya daha çox faizinin, yaxud iştirak paylarının hamısının dəyərinin 50 və ya daha çox faizinin sahibi sayılır.',
+        16, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '147'), '147.10',
+        'Çıxarılmışdır.',
+        17, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 148)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('148',
+        'Hüquqi şəxs üzərində sahibliyin əhəmiyyətli dərəcədə dəyişdirilməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '148'), '148.0',
+        'Hüquqi şəxsin sahibliyi əvvəlki ilə nisbətən 50 və ya daha çox faiz dəyişdikdə, bu dəyişikliyin baş verdiyi vergi ilindən başlayaraq əvvəlki vergi ilindən zərərin, gəlirdən çıxılmaların, əvəzləşdirmələrin keçirilməsinə, aşağıdakı hallar istisna edilməklə, icazə verilmir:',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '148'), '148.0.1',
+        'dəyişiklikdən sonrakı 3 il ərzində hüquqi şəxs həmin sahibkarlıq fəaliyyətini həyata keçirirsə və',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '148'), '148.0.2',
+        'dəyişiklikdən sonrakı 1 il ərzində hüquqi şəxs yeni sahibkarlıq fəaliyyətinə başlamırsa.',
+        3, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 149)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('149',
+        'Bəyannamənin verilməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.1',
+        'Aşağıdakı vergi ödəyiciləri bu Məcəllənin 149.2-ci maddəsində göstərilən müddətlərdə vergi orqanlarına bəyannamə verirlər:',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.1.1',
+        'rezident müəssisələr;',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.1.2',
+        'Azərbaycan Respublikasında daimi nümayəndəliyi olan qeyri-rezidentlər;',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.1.3',
+        'vergiyə cəlb olunan gəliri Azərbaycan mənbəyindən olan və bu gəlirindən ödəmə yerində vergi tutulmayan qeyri-rezidentlər;',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.1.3-1',
+        'bu Məcəllənin 149.1.3-cü maddəsində göstərilən qeyri-rezident şəxsin təyin etdiyi vergi agenti;',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.1.4',
+        'xüsusi notariuslar, xüsusi icra məmurları, ödəmə mənbəyində vergiyə cəlb olunması nəzərdə tutulmayan (tutulması mümkün olmayan) gəlirləri olan fiziki şəxslər, yaxud Azərbaycan Respublikasının hüdudlarından kənarda gəlir, o cümlədən royaltidən gəlir əldə edən rezident fiziki şəxslər;',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.1.5',
+        'sahibkarlıq fəaliyyətindən gəlir əldə edən qeyri-kommersiya təşkilatları.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.2',
+        'Bu Məcəllənin 149.1-ci maddəsində göstərilən şəxslər (xüsusi notariuslar və xüsusi icra məmurları istisna olmaqla) hesabat ilindən sonrakı ilin mart ayının 31-dən gec olmayaraq vergi orqanlarına bəyannamə verirlər. Xüsusi notariuslar hər rüb başa çatdıqdan sonra növbəti ayın 20-dən gec olmayaraq vergi orqanına bəyannamə verməlidirlər. Xüsusi icra məmurları "Xüsusi icra məmurları haqqında" Azərbaycan Respublikasının Qanununa əsasən xüsusi icra məmurunun fəaliyyətinə görə onlara ödənilən standart və əlavə icra haqlarına münasibətdə hər rüb başa çatdıqdan sonra növbəti ayın 20-dən gec olmayaraq vergi orqanlarına bəyannamə verməlidirlər.',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.3',
+        'Vergi ödəyicisi Azərbaycan Respublikasında fəaliyyətini müvəqqəti dayandırdıqda, habelə vergi ödəyicisi olan fiziki şəxsin fəaliyyətinə xitam verildikdə 30 gün müddətində vergi orqanlarına bəyannamə verməlidir. Bu maddənin məqsədləri üçün hesabat dövrü vergi ilinin əvvəlindən vergi ödəyicisi fəaliyyətini dayandırdığı və ya fiziki şəxsin fəaliyyətinə xitam verildiyi günə qədər olan dövrü əhatə edir. Vergi ilində fəaliyyətini müvəqqəti dayandıran vergi ödəyicisi həmin vergi ilində fəaliyyətini təkrar bərpa edərsə bu Məcəllənin 149.2-ci maddəsində göstərilən müddətdə vergi orqanına dəqiqləşdirilmiş bəyannamə təqdim etməlidir.',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.4',
+        'Hüquqi şəxs və ya qeyri-rezidentin daimi nümayəndəliyi ləğv edildikdə, ləğvetmə komissiyası (təsviyəçi, ləğvedici) və ya vergi ödəyicisi bu barədə qanunvericiliklə müəyyən edilmiş qaydada vergi orqanına məlumat verməlidir. Hüquqi şəxs və ya qeyri-rezidentin daimi nümayəndəliyi ləğvetmə balansını qeydiyyat orqanına təqdim etdiyi tarixdən 30 gün müddətində mənfəət vergisi bəyannaməsini vergi orqanına təqdim etməyə borcludur.',
+        10, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.4-1',
+        'Mənfəət (gəlir) vergisi ödəyicisi olmayan vergi ödəyicisinin ƏDV qeydiyyatı bu Məcəllənin 157.3.3-cü maddəsinə uyğun olaraq keçmiş tarixlə aparıldıqda, vergi ödəyicisi qeydiyyat bildirişinin verildiyi tarixdən etibarən 90 gün müddətində bəyannaməni vergi orqanına təqdim etməyə borcludur.',
+        11, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.5',
+        'Bəyannamə verməli olmayan fiziki şəxs verginin yenidən hesablanması və vəsaitlərin qaytarılması haqqında tələb irəli sürülən bəyannamə verə bilər.',
+        12, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '149'), '149.6',
+        'Azərbaycan Respublikasında daimi nümayəndəliyi olmayan, bu Məcəllənin 125.1.3-cü, 125.1.4-cü, 125.1.5-ci və ya 125.1.7-ci maddələrinə müvafiq qaydada ödəmə mənbəyində vergi tutulan gəlir əldə edən qeyri-rezident vergi ödəyicisi və ya onun təyin etdiyi vergi agenti bu cür gəlir haqqında bəyannamə verməklə tutulmuş verginin qaytarılması tələbini irəli sürə bilər. Bu cür bəyannamə bu Məcəllənin 149.2-ci maddəsinin birinci cümləsində müəyyən edilən müddətlərdə verilməlidir. Belə vergi ödəyicisindən Azərbaycan Respublikasında vergi ödəyicisinin daimi nümayəndəliyinin gəliri kimi bu Məcəllənin 105.1-ci maddəsində müəyyən edilən dərəcə ilə vergi tutulur, vergi ödəyicisinin gəlir əldə edilməsi ilə bağlı olan xərci isə daimi nümayəndəliyin xərcində olduğu kimi gəlirdən çıxılmalıdır, bu şərtlə ki, vergi bu Məcəllənin 125-ci maddəsinə uyğun olaraq ödəmə mənbəyində tutulan verginin məbləğindən artıq olmasın.',
+        13, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 150)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('150',
+        'Ödəmə mənbəyində verginin tutulması vaxtı və qaydası',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1',
+        'Vergi orqanında uçotda olan aşağıdakı şəxslər (vergi agentləri) ödəmə mənbəyində vergini tutmağa borcludurlar:',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.1',
+        'muzdla işləyən fiziki şəxslərə ödəmələr verən hüquqi şəxslər;',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.2',
+        'muzdla işləyən fiziki şəxslərə ödəmələr verən sahibkarlar və qeyri-sahibkarlıq fəaliyyətindən gəlir əldə edən fiziki şəxslər;',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.3',
+        'dövlət sosial təminat sistemi vasitəsilə ödənilən pensiyalar istisna edilməklə, digər şəxslərə pensiya ödəyən hüquqi şəxslər, sahibkarlar və qeyri-sahibkarlıq fəaliyyətindən gəlir əldə edən fiziki şəxslər;',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.4',
+        'hüquqi və fiziki şəxslərə dividend ödəyən rezident hüquqi şəxslər;',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.5',
+        'fiziki şəxslərə və Azərbaycan Respublikasında daimi nümayəndəliyi olmayan qeyri-rezident hüquqi şəxslərə faizlər ödəyən hüquqi şəxslər, sahibkarlar və qeyri-sahibkarlıq fəaliyyətindən gəlir əldə edən fiziki şəxslər;',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.6',
+        'bu Məcəllənin 124-cü, 125-ci və ya 126-cı maddələrində nəzərdə tutulan ödəmələr verən hüquqi şəxslər, sahibkarlar və qeyri-sahibkarlıq fəaliyyətindən gəlir əldə edən fiziki şəxslər.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.7',
+        'Vergi ödəyicisi kimi vergi orqanlarında uçota alınmayan, VÖEN təqdim etməyən fiziki şəxslərin göstərdiyi xidmətlərə (işlərə) görə həmin fiziki şəxslərə haqq ödəyən, habelə muzdlu işçi kimi cəlb etmədiyi fiziki şəxslərə maddi yardım, mükafat, təqaüd verən hüquqi şəxslər, fərdi sahibkarlar və qeyri-sahibkarlıq fəaliyyətindən gəlir əldə edən fiziki şəxslər;',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.8',
+        'Bu Məcəllənin 116.2-ci maddəsində nəzərdə tutulan sığorta müqaviləsinə vaxtından əvvəl xitam verildikdə, sığorta haqları ödəyən sığortaçılar;',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.9',
+        'fiziki şəxslər tərəfindən torpaq, yaşayış və qeyri-yaşayış sahələrinin təqdim edilməsi (fiziki şəxsin azı 3 (üç) təqvim ili ərzində yaşayış yeri üzrə qeydiyyatda olduğu yaşayış sahələrinin təqdim edilməsi, bu Məcəllənin 102.1.3.2-ci, 102.1.18-ci, 106.1.16-cı, 144.1.1-ci, 144.1.2-ci və 144.1.4-cü maddələrində nəzərdə tutulmuş hallarda təqdim edilməsi, həmçinin bina tikintisi fəaliyyəti ilə məşğul olan şəxs tərəfindən təqdim edilməsi halları istisna olmaqla) üzrə müqavilələri təsdiq edən, habelə "Notariat haqqında" Azərbaycan Respublikası Qanununun 63-cü maddəsinə əsasən icra sənədlərinin məcburi icrası ilə əlaqədar daşınmaz əmlakın əldə olunması barədə şəhadətnamələr (fərdi sahibkarın üzərinə həbs qoyulmuş və ya ipoteka ilə yüklü edilmiş əmlakının tələbkar (ipoteka saxlayan) tərəfindən əldə edilməsi ilə bağlı verilən şəhadətnamələr istisna olmaqla) verən notarius;',
+        10, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.10',
+        'idman mərc oyunlarından, lotereyalardan, habelə digər yarışlardan və müsabiqələrdən pul şəklində uduşlar (mükafatlar) əldə edən şəxsə ödəmələr verən şəxs;',
+        11, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.11',
+        'idman mərc oyunlarından, lotereyalardan, digər yarışlardan və müsabiqələrdən gəlir (mükafat) rezident hüquqi şəxs və fərdi sahibkarlar tərəfindən ödənildiyi halda ödəməni həyata keçirən şəxslər, həmin gəlirlər Azərbaycan Respublikasında daimi nümayəndəliyi olmayan qeyri-rezident şəxslər tərəfindən ödənildikdə, bu gəliri əldə edən şəxsin bank və digər ödəniş hesabının olduğu yerli ödəniş xidməti təchizatçısı və ya xarici ödəniş xidməti təchizatçısının Azərbaycan Respublikasındakı filialı;',
+        12, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.12',
+        'hüquqi şəxslərə və fərdi sahibkarlara bank və digər ödəniş hesablarındakı pul vəsaitlərinin nağd qaydada verilməsini həyata keçirən yerli ödəniş xidməti təchizatçıları və ya xarici ödəniş xidməti təchizatçısının Azərbaycan Respublikasındakı filialı;',
+        13, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.13',
+        'aşağıdakılar istisna olmaqla, fiziki şəxslər tərəfindən yaşayış və qeyri-yaşayış sahələrinin, habelə torpaq sahələrinin açıq hərrac qaydasında təqdim edilməsi üzrə hərracın nəticələrini "Daşınmaz əmlakın dövlət reyestri haqqında" Azərbaycan Respublikası Qanununun 8.0.2-ci maddəsində müəyyən olunmuş protokolla təsdiq edən ixtisaslaşdırılmış təşkilatlar, "İcra haqqında" Azərbaycan Respublikasının Qanununa uyğun olaraq keçirilən elektron hərracların operatoru:',
+        14, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.13.1',
+        'vergi borcunun ödənilməsi ilə bağlı siyahıya alınmış əmlak;',
+        15, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.13.2',
+        '"Banklar haqqında" Azərbaycan Respublikasının Qanunu ilə nəzərdə tutulmuş qaydada iflas prosesi çərçivəsində təqdim edilən aktivlər;',
+        16, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.13.3',
+        'ödəmə qabiliyyətini itirmiş bankların rezolyusiyası və sağlamlaşdırma tədbirləri çərçivəsində müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən müəyyən olunmuş qaydada təqdim olunan qeyri-işlək (toksik) aktivlər;',
+        17, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.13.4',
+        'qanunla nəzərdə tutulmuş qaydada üzərinə tələb yönəldilən dövlət əmlakının özəlləşdirilməsi, habelə bələdiyyə əmlakı üzərində mülkiyyət və icarə hüquqlarının özgəninkiləşdirilməsi;',
+        18, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.13.5',
+        'verilmiş borcun təminatı kimi fərdi sahibkarın əmlakı çıxış etdikdə ipoteka saxlayanın xeyrinə yüklü edilmiş əmlakın "İpoteka haqqında" Azərbaycan Respublikası Qanununun 43-cü maddəsinə uyğun olaraq ipoteka saxlayan tərəfindən əldə edilməsi.',
+        19, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.14',
+        'vergi ödəyicisi kimi vergi orqanında uçotda olmayan fiziki şəxslərə "Nağdsız hesablaşmalar haqqında" Azərbaycan Respublikasının Qanununun 3.5-ci maddəsində göstərilən malların təqdim edilməsinə görə (bu Məcəllə ilə vergidən azad olunan gəlirlər istisna olmaqla) ödəmələr verən hüquqi şəxslər və fərdi sahibkarlar;',
+        20, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.14-1',
+        'Bu Məcəllənin 101.6-1-ci maddəsində nəzərdə tutulan satışlardan əldə edilən gəlirlərlə bağlı müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum);',
+        21, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.15',
+        'vergi orqanında uçotda olmayan fiziki şəxslər istisna olmaqla, bu Məcəllənin 13.2.16.14-1-ci maddəsində göstərilən ödənişləri həyata keçirən şəxslər;',
+        22, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.16',
+        'vergi orqanında uçotda olmayan fiziki şəxslərin bu Məcəllənin 13.2.16.14-1-ci maddəsində göstərilən ödənişlərini həyata keçirən yerli ödəniş xidməti təchizatçıları və ya xarici ödəniş xidməti təchizatçısının Azərbaycan Respublikasındakı filialı;',
+        23, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.17',
+        '"Vəkillər və vəkillik fəaliyyəti haqqında" Azərbaycan Respublikasının Qanununa uyğun olaraq vəkil qurumlarının tərkibində fəaliyyət göstərən vəkillər tərəfindən göstərilən vəkillik fəaliyyəti ilə bağlı vəkillərə ödənişi həyata keçirən vəkil qurumu;',
+        24, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.1.18',
+        '"Mediasiya haqqında" Azərbaycan Respublikasının Qanununa uyğun olaraq mediasiya təşkilatları ilə bağlanmış mülki-hüquqi müqavilələr əsasında fəaliyyət göstərən mediatorlar tərəfindən göstərilən mediasiya xidməti ilə bağlı mediatorlara ödənişi həyata keçirən mediasiya təşkilatı.',
+        25, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.2',
+        'Bu Məcəllənin 150.1-ci maddəsində göstərilən şəxslər verginin tutulması və büdcəyə köçürülməsi üçün cavabdehdirlər. Vergi məbləği tutulmursa və ya tutulmuş vergi büdcəyə köçürülmürsə, gəliri ödəyən hüquqi şəxslər, sahibkarlar və vergi orqanında uçotda olan qeyri-sahibkarlıq fəaliyyətindən gəlir əldə edən fiziki şəxslər tutulmamış və ya köçürülməmiş verginin məbləğini, həmçinin müvafiq faizləri və sanksiyaları büdcəyə ödəməyə borcludurlar.',
+        26, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3',
+        'Bu Məcəllənin 150.1-ci maddəsinə uyğun olaraq ödəmə mənbəyində vergi tutan hüquqi şəxslər, fərdi sahibkarlar və vergi orqanında uçotda olan qeyri-sahibkarlıq fəaliyyətindən gəlir əldə edən fiziki şəxslər:',
+        27, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3.1',
+        'bu Məcəllənin 150.1.1-ci, 150.1.2-ci, 150.1.8-ci, 150.1.14-1-ci, 150.1.17-ci və 150.1.18-ci maddələrinə uyğun olaraq fiziki şəxslərin hesablanmış aylıq gəlirinə gəlir vergisini hesablamağa və hesablanmış vergini növbəti ayın 20-dən gec olmayaraq büdcəyə köçürməyə;',
+        28, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3.2',
+        'bu Məcəllənin 150.1.3-150.1.7-ci maddələrinə uyğun olaraq gəlirin ödənildiyi rübdən sonrakı ayın 20-dən gec olmayaraq vergini büdcəyə köçürməyə;',
+        29, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3.3',
+        'bu Məcəllənin 150.1.1 - 150.1.8-ci, 150.1.14-1-ci, 150.1.17-ci və 150.1.18-ci maddələrinə uyğun olaraq ödəmə mənbəyində vergini tutan şəxslər ödəmə mənbəyində tutulan vergilər barədə müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqanın (qurumun) müəyyən etdiyi formada bəyannaməni rüb başa çatdıqdan sonra növbəti ayın 20-dən gec olmayaraq vergi orqanına verməyə borcludurlar.',
+        30, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3-1',
+        'Notarius, ixtisaslaşdırılmış hərrac təşkilatları və "İcra haqqında" Azərbaycan Respublikasının Qanununa uyğun olaraq keçirilən elektron hərraclarda elektron hərracların operatoru bu Məcəllənin 220.8-ci və 220.8-1-ci maddələrinə uyğun olaraq sadələşdirilmiş vergini hesablayaraq 1 (bir) əməliyyat günü ərzində dövlət büdcəsinə ödəyir və hesabat ayından sonrakı ayın 20-dən gec olmayaraq müvafiq icra hakimiyyəti orqanının müəyyən etdiyi forma üzrə bəyannaməni vergi orqanına verməyə borcludur.
+
+   Notarius fərdi sahibkarın üzərinə həbs qoyulmuş və ya ipoteka ilə yüklü edilmiş daşınmaz əmlakının tələbkar (ipoteka saxlayan) tərəfindən əldə edilməsi ilə bağlı əməliyyatlar üzrə "Notariat haqqında" Azərbaycan Respublikası Qanununun 63-cü maddəsində nəzərdə tutulan şəhadətnamənin verildiyi gündən 10 (on) iş günü müddətində müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqanın (qurumun) müəyyən etdiyi formada məlumatı vergi orqanına təqdim etməlidir.
+
+   Vergi ödəyicisi kimi vergi orqanında uçotda olmayan fiziki şəxslərin daşınmaz əmlakı "Notariat haqqında" Azərbaycan Respublikası Qanununun 63-cü maddəsinə əsasən verilən şəhadətnamə əsasında tələbkar (ipoteka saxlayan) tərəfindən əldə edildikdə bu Məcəllənin 220.8-ci və 220.8-1-ci maddələrinə uyğun olaraq hesablanmış sadələşdirilmiş vergi notarius tərəfindən tələbkardan (ipoteka saxlayandan) tutulur.',
+        31, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3-2',
+        'Bu Məcəllənin 150.1.10-cu və 150.1.11-ci maddələrində göstərilən şəxslər bu Məcəllənin 101.5-ci maddəsinə uyğun olaraq gəlir vergisini hesablamağa və hesabat ayından sonrakı ayın 20-dən gec olmayaraq hesablanmış vergini dövlət büdcəsinə köçürməyə və müvafiq icra hakimiyyəti orqanının müəyyən etdiyi forma üzrə bəyannaməni vergi orqanına verməyə borcludurlar.',
+        32, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3-3',
+        'bu Məcəllənin 150.1.12-ci maddəsində göstərilən şəxslər bu Məcəllənin 220.12-ci maddəsinə uyğun olaraq sadələşdirilmiş vergini hesablamağa, vəsaiti alan şəxsin bank və digər ödəniş hesabından tutmağa və hesabat ayından sonrakı ayın 20-dən gec olmayaraq hesablanmış vergini dövlət büdcəsinə köçürməyə və müvafiq icra hakimiyyəti orqanının müəyyən etdiyi forma üzrə bəyannaməni vergi orqanına verməyə borcludurlar.',
+        33, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3-4',
+        'Bu Məcəllənin 150.1.14-cü maddəsində göstərilən şəxslər bu Məcəllənin 101.6-cı maddəsinə uyğun olaraq gəlir vergisini hesablamağa, hesablanmış vergini hesabat rübündən sonrakı ayın 20-dən gec olmayaraq dövlət büdcəsinə köçürməyə və müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqanının (qurumun) müəyyən etdiyi forma üzrə bəyannaməni rüb başa çatdıqdan sonra növbəti ayın 20-dən gec olmayaraq vergi orqanına verməyə borcludurlar.',
+        34, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3-5',
+        'Fərdi sahibkarın üzərinə həbs qoyulmuş və ya ipoteka ilə yüklü edilmiş daşınmaz əmlakının tələbkar (ipoteka saxlayan) tərəfindən əldə edilməsi zamanı fərdi sahibkarlar bu Məcəllənin 220.8-ci və 220.8-1-ci maddələrinə uyğun olaraq sadələşdirilmiş vergini hesablamağa və hesabat ayından sonrakı ayın 20-dən gec olmayaraq hesablanmış vergini dövlət büdcəsinə köçürməyə və müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqanın (qurumun) təsdiq etdiyi forma üzrə bəyannaməni vergi orqanına verməyə borcludurlar.',
+        35, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.3-6',
+        'Bu Məcəllənin 150.1.15-ci və 150.1.16-cı maddələrində göstərilən şəxslər bu Məcəllənin 125-1-ci maddəsinə uyğun olaraq vergini hesablamağa, hesabat rübündən sonrakı ayın 20-dən gec olmayaraq hesablanmış vergini büdcəyə köçürməyə və müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqanın (qurumun) müəyyən etdiyi forma üzrə bəyannaməni rüb başa çatdıqdan sonra növbəti ayın 20-dən gec olmayaraq vergi orqanına verməyə borcludurlar.',
+        36, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.4',
+        'Vergi ödəyicisinin iş yerində vergi agenti aylıq gəlir üzrə vergi tutmağa borcludur. Vergi ödəyicisi bu Məcəllənin 149.5-ci maddəsində nəzərdə tutulmuş hüquqlardan istifadə etmirsə, tutulmuş vergi gəlir vergisinin tam məbləği sayılır.',
+        37, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.5',
+        'Muzdlu işlə əlaqədar ödəmə mənbəyində tutulan vergi istisna olmaqla, digər gəlirlərdən ödəmə mənbəyində verginin tutulması öhdəliyinin yaranma vaxtı aşağıdakı qaydada müəyyən edilir:',
+        38, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.5.1',
+        'vergi ödəyicisi pul vəsaitini nağd qaydada ödəyirsə, nağd pul vəsaitinin ödənildiyi, nağdsız ödəmə zamanı pul vəsaitinin köçürülməsinə dair ödəmə tapşırığının ödəniş xidməti təchizatçısı tərəfindən icraya qəbul edildiyi vaxt;',
+        39, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.5.2',
+        'vergi ödəyicisinin kreditoru qarşısında maliyyə öhdəlikləri ləğv edildiyi və ya ödənildiyi halda (qarşılıqlı hesablaşmalar aparıldıqda və digər bu kimi hallarda), öhdəliyin ləğv edildiyi və ya ödənildiyi (əvəzləşdirildiyi) vaxt;',
+        40, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.5.3',
+        'vergi orqanında uçotda olmayan fiziki şəxslərin bu Məcəllənin 13.2.16.14-1-ci maddəsində göstərilən ödəmələrindən pul vəsaitinin köçürülməsinə dair ödəmə tapşırığının ödəniş xidməti təchizatçısı tərəfindən icra edildiyi vaxt.',
+        41, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '150'), '150.6',
+        'Bu Məcəllənin 150.3.3-cü və 150.3-1 - 150.3-6-cı maddələrində göstərilən vergi ödəyiciləri Azərbaycan Respublikasında fəaliyyətini dayandırdıqda, habelə hüquqi şəxs və ya qeyri-rezidentin daimi nümayəndəliyi ləğv edildikdə, yaxud vergi ödəyicisi olan fiziki şəxsin fəaliyyətinə xitam verildikdə bu Məcəllənin 150.3.3-cü və 150.3-1 - 150.3-6-cı maddələrində göstərilən müddətlərdən gec olmamaq şərtilə 30 gün müddətində ödəmə mənbəyində tutulan vergilər barədə vergi orqanına bəyannamə verməyə borcludurlar.',
+        42, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 151)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('151',
+        'Cari vergi ödəmələri',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.1',
+        'Hüquqi şəxslər və fərdi sahibkarlar rüb qurtardıqdan sonra 15 gündən gec olmayaraq cari ödəmələri dövlət büdcəsinə ödəməlidirlər. Bələdiyyə mülkiyyətində olan müəssisə və təşkilatlar mənfəət vergisini yerli büdcəyə (bələdiyyə büdcəsinə) ödəyirlər. Hər ödəmənin məbləği əvvəlki vergi ilində hesablanmış vergi məbləğinin 1/4 hissəsini təşkil edir. Xüsusi notariuslar bu Məcəllənin 101.4-cü maddəsi ilə müəyyən edilmiş dərəcə ilə hesablanmış vergini növbəti ayın 20-dən gec olmayaraq dövlət büdcəsinə ödəməlidirlər. Xüsusi icra məmurları bu Məcəllənin 101.4-1-ci maddəsi ilə müəyyən edilmiş dərəcə ilə hesablanmış vergini növbəti ayın 20-dən gec olmayaraq dövlət büdcəsinə ödəməlidirlər.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.2',
+        'Vergi ödəyicisi cari vergi ödəmələrinin məbləğini bu rübdəki vergiyə cəlb olunan gəlirinin (xərclər nəzərə alınmadan) həcmini onun keçən ilin vergiyə cəlb olunan gəlirində (xərclər nəzərə alınmadan) verginin xüsusi çəkisini göstərən əmsala vurmaqla müəyyənləşdirə bilər.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.3',
+        'Bu zaman vergi ödəyicisi il ərzində cari vergi ödəmələrinin məbləğini müəyyənləşdirməyin yuxarıdakı iki mümkün metodundan birini seçir və hər il aprel ayının 15-dək bu barədə vergi orqanına məlumat verir. Vergi ödəyicisi cari vergi ödəmələrinin məbləğini müəyyənləşdirmək üçün bu Məcəllənin 151.2-ci maddəsində nəzərdə tutulan metodu seçdiyi halda, hər rüb başa çatdıqdan sonra 15 gün ərzində mənfəətdən və ya gəlirdən hesablanmış cari vergi məbləği barədə vergi orqanına arayış təqdim etməlidir, əks halda, vergi orqanı bu Məcəllənin 151.1-ci maddəsində nəzərdə tutulan metodu tətbiq edir. Vergi ödəyicisi cari vergi ödəmələrinin məbləğini müəyyənləşdirmək üçün tətbiq etdiyi metod barədə məlumat vermədiyi halda vergi orqanı birinci metodu tətbiq edir və həmin metod vergi ilinin sonunadək dəyişdirilmir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.4',
+        'Cari vergi ödəmələri vergi ili üçün vergi ödəyicisindən tutulan verginin məbləğinə aid edilir.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5',
+        'Əvvəlki vergi ilində fəaliyyəti və ya vergi tutulan mənfəəti (gəliri) olmayan və növbəti vergi ilində fəaliyyət göstərən hüquqi şəxslərin və sahibkarlıq fəaliyyətini hüquqi şəxs yaratmadan həyata keçirən fiziki şəxslərin, habelə yeni yaradılmış və fəaliyyət göstərən vergi ödəyicilərinin (bundan sonra - əvvəllər fəaliyyəti və ya vergi tutulan mənfəəti (gəliri) olmayan vergi ödəyiciləri) cari vergi ödəmələri aşağıda göstərilən qaydada həyata keçirilir:',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5.1',
+        'Əvvəllər fəaliyyəti və ya vergi tutulan mənfəəti (gəliri) olmayan vergi ödəyicilərinin mənfəət vergisi və ya gəlir vergisi üzrə cari vergi ödəmələri təqvim ili ərzində rüblər üzrə artan yekunla (əvvəlki illərdə yaranmış zərər məbləğləri vergi tutulan mənfəətdən (gəlirdən) çıxılmaqla) bu Məcəllə ilə müəyyənləşdirilən müvafiq vergi dərəcələrinə əsasən hesablanır.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5.2',
+        'Cari vergi ödəmələrinin məbləği mənfəətdən və ya gəlirdən verginin məbləğinin 75 faizindən az olmamalıdır.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5.3',
+        'Əvvəllər fəaliyyəti və ya vergi tutulan mənfəəti (gəliri) olmayan vergi ödəyiciləri rüb başa çatdıqdan sonra 15 gün ərzində cari vergi ödəmələrini aparmalı və rüb ərzində mənfəətdən və ya gəlirdən hesablanmış cari vergi məbləği barədə vergi orqanına arayış təqdim etməlidirlər.',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5.4',
+        'Cari vergi ödəmələri bu Məcəllənin 151.5.3-cü maddəsi ilə müəyyən edilmiş müddətdə ödənilmədikdə, ödəmə müddətindən sonrakı hər bir ötmüş gün üçün əvvəllər fəaliyyəti və ya vergi tutulan mənfəəti (gəliri) olmayan vergi ödəyicisindən ödənilməmiş cari vergi ödəmələrinə görə bu Məcəllənin 59-cu maddəsində nəzərdə tutulmuş qaydada faiz tutulur.',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5.5',
+        'Bu Məcəllənin 151.5.4-cü maddəsində müəyyən edilmiş faiz bu Məcəlləyə müvafiq olaraq aparılmış vergi yoxlaması nəticəsində aşkar edilmiş vaxtında ödənilməmiş vergilər üzrə cari vergi ödəmələrinə münasibətdə bütün ötmüş müddətə ancaq bir ildən çox olmamaq şərti ilə tətbiq edilir.',
+        10, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5.6',
+        'Cari vergi ödəmələri vergi ili üçün əvvəllər fəaliyyəti və ya vergi tutulan mənfəəti (gəliri) olmayan vergi ödəyicisindən tutulan verginin məbləğinə aid edilir.',
+        11, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5.7',
+        'Sadələşdirilmiş verginin ödəyiciləri mənfəət və ya gəlir vergisi ödəyicisi olduqda cari vergi ödəmələrinin məbləği bu Məcəlləyə uyğun olaraq müəyyən edilir.',
+        12, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.5.8',
+        'Əvvəllər fəaliyyəti və ya vergi tutulan mənfəəti (gəliri) olmayan vergi ödəyiciləri bu Məcəllənin 16.2-ci və 151.5.3-cü maddələrində nəzərdə tutulmuş müvafiq arayışı təqdim etmədikləri halda, vergi orqanı cari vergi ödəmələrinin məbləğini bu Məcəllənin 67-ci maddəsinə uyğun olaraq vergini əlaqəli məlumatlar əsasında hesablayır və vergi ödəyicisinə müvafiq bildiriş göndərir.',
+        13, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.6',
+        'Cari vergi ödəmələri hesabat ili başa çatdıqdan sonra yenidən haqq-hesab edilir və bu zaman hesablanmış cari vergi məbləği hesabat üzrə vergi məbləğindən çox olduğu halda artıq hesablanmış cari vergi və ona uyğun faiz məbləğləri azaldılır.',
+        14, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '151'), '151.7',
+        'Cari vergi ödəmələri bu Məcəllədə nəzərdə tutulan güzəşt və azadolmalar nəzərə alınmaqla hesablanır və hesabat ili başa çatdıqdan sonra yenidən haqq-hesab edilir.',
+        15, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLE (Maddə 152)
+-- ============================
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('152',
+        'İlin yekunlarına görə verginin ödənilməsi',
+        'Fəsil X. Fiziki şəxslərin gəlir vergisinə və hüquqi şəxslərin mənfəət vergisinə aid olan maddələr',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '152'), '152.1',
+        'Vergi ödəyiciləri vergi ili üçün bəyannamənin verilməsinin müəyyən edilmiş vaxtınadək son hesablamanı aparmalı və vergini ödəməlidirlər.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '152'), '152.2',
+        'Bələdiyyələrin mülkiyyətində olan müəssisələr mənfəət vergisini yerli büdcəyə, digər müəssisələr isə dövlət büdcəsinə ödəyir. Fiziki şəxslər gəlir vergisini dövlət büdcəsinə ödəyirlər.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '152'), '152.3',
+        'Gəlir vergisinin ödəyicisi kimi fəaliyyət göstərən mikro sahibkarlıq subyekti olan fiziki şəxslər tərəfindən özlərinə görə ödədikləri illik məcburi dövlət sosial sığorta haqqı məbləğinin 25 faizi 2024-cü il yanvarın 1-dən 3 il müddətinə vergi ödəyicisinin təqvim ilinin yekunlarına görə hesablanmış və əvvəlki illərin zərəri çıxılmaqla ödənilməli olan gəlir vergisi öhdəliyindən (həmin öhdəliklərin məbləğindən çox olmamaqla) çıxılır.',
+        3, false, NOW(), NOW());
+
+-- ============================
+-- TAX ARTICLES (Fəsil XI: Maddə 153 - 157)
+-- ============================
+
+-- Maddə 153
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('153',
+        'Əlavə dəyər vergisi anlayışı',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '153'), '153.1',
+        'Əlavə dəyər vergisi (bundan sonra - ƏDV) vergi tutulan dövriyyədən hesablanan verginin məbləği ilə bu Məcəllənin müddəalarına uyğun olaraq verilən elektron qaimə-fakturalara və ya idxalda ƏDV-nin ödənildiyini göstərən sənədlərə müvafiq surətdə əvəzləşdirilməli olan verginin məbləği arasındakı fərqdir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '153'), '153.2',
+        'Azərbaycan Respublikası ərazisində istehsal olunan kənd təsərrüfatı məhsullarının pərakəndə satışı zamanı ƏDV ticarət əlavəsindən hesablanan verginin məbləğidir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '153'), '153.3',
+        '2022-ci il yanvarın 1-dən 5 il müddətində kənd təsərrüfatı məhsullarının (yerli və xarici mənşəli (xarici mənşəli balıq məhsulları istisna olmaqla)) topdan və pərakəndə satışı zamanı ƏDV ticarət əlavəsindən hesablanan verginin məbləği hesab edilir.',
+        3, false, NOW(), NOW());
+
+-- Maddə 154
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('154',
+        'Vergi ödəyiciləri',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '154'), '154.1',
+        'ƏDV-nin ödəyicisi kimi qeydiyyatdan keçən və ya qeydiyyatdan keçməli olan şəxs ƏDV-nin ödəyicisidir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '154'), '154.2',
+        'Qeydiyyatdan keçən şəxs qeydiyyatın qüvvəyə mindiyi andan etibarən vergi ödəyicisi olur. Qeydiyyata dair ərizə verməli olan, lakin qeydiyyatdan keçməmiş şəxs qeydiyyata dair ərizə vermək öhdəliyinin yarandığı dövrdən sonrakı hesabat dövrünün başlanğıcından etibarən vergi ödəyicisi sayılır.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '154'), '154.3',
+        'Azərbaycan Respublikasına ƏDV tutulan malları idxal edən şəxslər bu cür idxal malları üzrə ƏDV-nin ödəyiciləri sayılırlar.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '154'), '154.4',
+        'ƏDV-nin məqsədləri üçün qeydiyyatdan keçmədən iş görən və ya xidmət göstərən və bu Məcəllənin 169-cu maddəsinə müvafiq surətdə vergiyə cəlb edilməli olan qeyri-rezident şəxs həmin işlər və ya xidmətlər üzrə vergi ödəyicisi sayılır.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '154'), '154.5',
+        'Bu Məcəllənin 137-ci maddəsinə uyğun olaraq hüquqi şəxs yaratmadan göstərilən birgə sahibkarlıq fəaliyyəti ƏDV-nin məqsədləri üçün ayrıca şəxs sayılır. Bu maddənin məqsədi üçün ayrıca şəxs dedikdə birgə sahibkarlıq fəaliyyətinin uçotunu aparan şəxs nəzərdə tutulur.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '154'), '154.6',
+        'Aksizli, məcburi nişanlama ilə nişanlanmalı malların istehsalçıları və sadələşdirilmiş verginin ödəyicisi olmaq hüququndan istifadə etməyən bina tikintisi fəaliyyəti ilə məşğul olan şəxslər ƏDV-nin ödəyiciləri sayılır.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '154'), '154.7',
+        'Bu Məcəllənin 33.8-1-ci maddəsində göstərilən şəxslər (bu Məcəllənin 19-cu maddəsi ilə nəzərdə tutulan daimi nümayəndəliklər istisna olmaqla) ƏDV-nin ödəyiciləri sayılır.',
+        7, false, NOW(), NOW());
+
+-- Maddə 155
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('155',
+        'Qeydiyyata dair ərizə verilməsinin tələb edilməsi',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '155'), '155.1',
+        'Sahibkarlıq fəaliyyəti göstərən və ardıcıl 12 aylıq dövrün istənilən ayında (aylarında) vergi tutulan əməliyyatlarının həcmi 200.000 manatdan artıq olan şəxslər, o cümlədən bu Məcəllənin 218.1-ci maddəsi ilə müəyyən edilmiş hüquqdan istifadə etməyən ticarət və (və ya) ictimai iaşə fəaliyyəti ilə məşğul olan şəxslər (bu Məcəllənin 218.4.1-ci, 218.4.2-ci və 218.4.3-cü maddələrində göstərilənlər istisna olmaqla) bu Məcəllənin 157.3.1-ci maddəsində göstərilən tarixdən 10 gün ərzində ƏDV-nin məqsədləri üçün qeydiyyata dair ərizə verməyə borcludur.
+
+Bir əqd və ya müqavilə üzrə əməliyyatın ümumi dəyəri 200.000 manatdan artıq olduqda, bu əməliyyat ƏDV tutulan əməliyyat sayılır və həmin əməliyyatı həyata keçirən şəxs bu əməliyyatın aparıldığı günədək ƏDV-nin məqsədləri üçün qeydiyyata dair ərizə verməyə borcludur.
+
+Bu Məcəllənin 154.6-cı maddəsində nəzərdə tutulan fəaliyyətlə məşğul olan şəxslər dövlət qeydiyyatına və ya vergi orqanında uçota alınmaq üçün ərizə ilə birlikdə, bu fəaliyyətlə sonradan məşğul olduqları halda isə həmin fəaliyyəti həyata keçirməyə başladığı günədək ƏDV məqsədləri üçün qeydiyyata dair ərizə verməyə borcludurlar.
+
+Bu Məcəllənin 218.1.2-ci maddəsində göstərilən şəxslər həmin maddədə müəyyən edilmiş hüquqdan istifadə etdikdə ardıcıl 12 aylıq dövrün istənilən ayında vergi tutulan əməliyyatlarının həcmi 200.000 manatı keçdiyi aydan sonrakı ayın 1-dən etibarən 10 gün ərzində fəaliyyətlərini sadələşdirilmiş vergi ödəyicisi kimi davam etdirəcəkləri barədə vergi orqanına yazılı formada ərizə təqdim etməlidirlər.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '155'), '155.1-1',
+        'Bu Məcəllənin 155.1-ci maddəsinə əsasən vergi tutulan əməliyyatların həcmi müəyyən edilərkən vergi ödəyicisinin pərakəndə ticarət və vergi orqanında uçotda olmayan şəxslərə göstərilən xidmətlər üzrə nağdsız qaydada POS-terminal vasitəsilə aparılan ödəmələr əsasında formalaşan dövriyyəsi 0,5 əmsal tətbiq edilməklə nəzərə alınır.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '155'), '155.2',
+        'Qeyri-rezidentin mallar göndərməsi, işlər görməsi və xidmətlər göstərməsi bu Məcəllənin 155.1-ci maddəsinin məqsədləri üçün vergi tutulan əməliyyatların ümumi dəyəri müəyyən edilərkən yalnız o zaman nəzərə alınır ki, onlar Azərbaycan Respublikasındakı daimi nümayəndəlik vasitəsilə həyata keçirilmiş olsun.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '155'), '155.3',
+        'Bu Məcəllənin 154.5-ci maddəsində göstərilən şəxs, bu Məcəllənin 155.1-ci maddəsində müəyyən edildiyi halda, yaxud iştirakçı ƏDV-nin məqsədləri üçün vergi ödəyicisi olduğu halda, birgə sahibkarlıq fəaliyyətinin uçotunu aparan şəxs qeydiyyata alınmaq üçün ərizə verməyə borcludur.',
+        4, false, NOW(), NOW());
+
+-- Maddə 156
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('156',
+        'Könüllü qeydiyyat',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '156'), '156.1',
+        'Qeydiyyatdan keçməli olmayan sahibkarlıq fəaliyyəti göstərən şəxs vergi orqanına ƏDV-nin məqsədləri üçün qeydiyyat haqqında könüllü ərizə verə bilər.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '156'), '156.1-1',
+        'bu Məcəllənin 218.4.1-ci maddəsində nəzərdə tutulan, göstərilən xidmətlərin dəyərini nağdsız qaydada əldə edən şəxslər (taksi fəaliyyəti göstərən şəxslər istisna olmaqla) bu Məcəllənin 156-cı maddəsi ilə müəyyən edilən hüquqdan istifadə edə bilərlər.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '156'), '156.1-2',
+        'Bu Məcəllənin 156.1-1-ci maddəsində nəzərdə tutulan şəxslər yanvar ayının 31-dən gec olmayaraq, ƏDV məqsədləri üçün qeydiyyata alınmasına dair ərizəni uçotda olduğu vergi orqanına təqdim edir və həmin şəxslərin ƏDV məqsədləri üçün qeydiyyatı həmin ayın birinci günündən qüvvəyə minir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '156'), '156.2',
+        'Çıxarılmışdır.',
+        4, false, NOW(), NOW());
+
+-- Maddə 157
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('157',
+        'Qeydiyyat',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '157'), '157.1',
+        'ƏDV-nin məqsədləri üçün məcburi və ya könüllü qeydiyyat haqqında ərizə müvafiq icra hakimiyyəti orqanının müəyyən etdiyi forma üzrə verilməlidir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '157'), '157.2',
+        'Şəxs ƏDV-nin məqsədləri üçün qeydiyyatdan keçərkən vergi orqanı həmin şəxsi ƏDV ödəyicilərinin dövlət reyestrində qeydə almağa və ərizə verildikdən sonra 5 iş günündən gec olmayaraq ona müvafiq icra hakimiyyəti orqanının müəyyən etdiyi forma üzrə qeydiyyat bildirişi verməyə, həmin bildirişdə vergi ödəyicisinin adını və ona aid olan digər məlumatı, qeydiyyatın qüvvəyə mindiyi tarixi və VÖEN-i göstərməyə borcludur.
+
+Şəxsin ərizəsindəki məlumatların düzgün olmadığı müəyyən edildikdə, araşdırmanın nəticələri üzrə vergi orqanı tərəfindən bu Məcəllənin 157-2-ci maddəsinin dördüncü abzasında müəyyən edilmiş formada əsaslandırılmış akt tərtib olunur. Akt iki nüsxədə tərtib olunur və bir nüsxəsi şəxsə təqdim edilir. Şəxs aktı aldığı gündən 5 gün müddətində dəqiqsizlikləri aradan qaldırıb vergi orqanına təqdim etməlidir, təqdim edilmiş ərizədə dəqiqsizliklər olmadıqda şəxs qeydiyyata alınır və bu barədə şəxsə vergi orqanı tərəfindən bildiriş göndərilir. Şəxs bu maddənin ikinci abzasında müəyyən edilmiş qaydada dəqiqsizlikləri aradan qaldırmadıqda və qeydiyyata alınmadıqda vergi orqanı tərəfindən ona qeydiyyata alınmadan imtina barədə bildiriş təqdim edilir. Araşdırmanın nəticələri üzrə tərtib olunan aktın forması müvafiq icra hakimiyyəti orqanı tərəfindən müəyyən edilir.
+
+ƏDV ödəyicisinin qeydiyyat bildirişi ƏDV ödəyicisinə bir dəfə verilir və onda saxlanılır. ƏDV ödəyicisinin qeydiyyat bildirişi itirildikdə və ya yararsız hala düşdükdə vergi ödəyicisinin müraciəti əsasında ona bildirişin surəti verilir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '157'), '157.3',
+        'Qeydiyyat hansı tarixin əvvəl başlanmasından asılı olaraq aşağıdakı tarixlərin birində qüvvəyə minir:
+
+157.3.1. məcburi qeydiyyat zamanı:
+- ardıcıl 12 aylıq dövrün istənilən ayında (aylarında) vergi tutulan əməliyyatların həcmi 200.000 manatdan artıq olduqda - növbəti ayın birinci günündə;
+- bir əqd və ya müqavilə üzrə ƏDV-yə cəlb olunan əməliyyatın ümumi dəyəri 200.000 manatdan artıq olduqda - əməliyyatın aparıldığı günədək;
+- bu Məcəllənin 154.6-cı maddəsində nəzərdə tutulan fəaliyyətlə məşğul olan şəxslərin dövlət qeydiyyatına və ya vergi orqanında uçota alındığı gündə, bu fəaliyyətlə sonradan məşğul olduqları halda isə həmin fəaliyyəti həyata keçirməyə başladığı gündə.
+
+157.3.2. könüllü qeydiyyat zamanı - qeydiyyat haqqında ərizənin verildiyi aydan sonrakı hesabat dövrünün birinci günündə.
+
+157.3.3. Bu Məcəllənin 85.4-cü maddəsi ilə müəyyən edilmiş 3 il müddətindən çox olmamaqla, vergi ödəyicisinin qeydiyyat haqqındakı ərizəsində göstərilən tarixdə.
+
+Bu Məcəllənin 85.4-cü maddəsində göstərilən 3 illik dövr bitdikdən sonra vergi ödəyicisi tərəfindən ƏDV-nin dəqiqləşdirilməsinə və əvəzləşdirilməsinə yol verilmir.
+
+Bu maddənin müddəaları bu Məcəllənin 218.4.1-ci maddəsində göstərilən şəxslərə, habelə 2024-cü il yanvarın 1-dən əvvəlki dövrə münasibətdə Azərbaycan Respublikasının ərazisində yük daşımalarını həyata keçirən şəxslərə tətbiq edilmir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '157'), '157.4',
+        'Vergi orqanı ƏDV-nin ödəyicilərinin reyestrini aparmağa borcludur. Vergi ödəyiciləri ƏDV-nin reyestrinə daxil edilərkən onların uçota alınması haqqında vergi orqanına təqdim etdikləri ərizədəki məlumatlardan istifadə olunur.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '157'), '157.5',
+        'ƏDV-nin məqsədləri üçün qeydiyyatdan keçməyə borclu olan, lakin qeydiyyat üçün ərizə verməyən vergi ödəyicisini (bu Məcəllənin 158.2-ci maddəsinin ikinci abzasında göstərilən vergi ödəyiciləri istisna olmaqla) vergi orqanı öz təşəbbüsü ilə qeydiyyata alır və ona müvafiq qeydiyyat bildirişi göndərir.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '157'), '157.6',
+        'ƏDV ödəyicilərinin məlumatlarında dəyişikliklər baş verdikdə ƏDV ödəyicilərinin dövlət reyestrində müvafiq düzəlişlər edilməlidir.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '157'), '157.7',
+        'Çıxarılmışdır.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '157'), '157.8',
+        'Bu Məcəllə ilə müəyyən olunmuş hallarda rəsmi sorğulara əsasən sorğu edənə "ƏDV ödəyicilərinin reyestrindən çıxarış" verilir.',
+        8, false, NOW(), NOW());
+-- ============================
+-- TAX ARTICLES (Fəsil XI: Maddə 158 - 163)
+-- ============================
+
+-- Maddə 158
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('158',
+        'Qeydiyyatın ləğv edilməsi',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '158'), '158.1',
+        'Vergi ödəyicisi, o cümlədən bu Məcəllənin 218.1.2-ci maddəsində göstərilən şəxslər (bu Məcəllənin 16.3-cü maddəsində nəzərdə tutulan hallar istisna edilməklə) ƏDV-nə cəlb olunan əməliyyatlar aparmağı dayandırırsa, ƏDV-nin məqsədləri üçün qeydiyyatın ləğv olunmasına dair ərizə verməyə borcludur. Bu halda, ƏDV-nin məqsədləri üçün qeydiyyatın ləğv olunması vergi ödəyicisinin vergi tutulan əməliyyatları tam dayandırdığı gün qüvvəyə minir.
+
+Bu Məcəllənin 218.4.1-ci maddəsində göstərilən şəxslər ƏDV-nin məqsədləri üçün son qeydiyyatın qüvvəyə mindiyi tarixdən etibarən 3 il keçdikdən sonrakı istənilən vaxt qeydiyyatın ləğv olunmasına dair ərizə verə bilər.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '158'), '158.2',
+        'Vergi ödəyicisinin vergiyə cəlb olunan əməliyyatlarının ümumi məbləği əvvəlki tam 12 təqvim ayı ərzində 100.000 manatdan çox deyilsə, bu Məcəllənin 158.1-ci maddəsində nəzərdə tutulan hallar istisna edilməklə, vergi ödəyicisi ƏDV-nin məqsədləri üçün son qeydiyyatın qüvvəyə mindiyi tarixdən etibarən bir il keçdikdən sonrakı istənilən vaxt qeydiyyatın ləğv olunmasına dair ərizə verə bilər. ƏDV-nin məqsədləri üçün qeydiyyatın ləğv olunması vergi orqanına qeydiyyatın ləğv edilməsinə dair ərizənin verildiyi gün qüvvəyə minir.
+
+Vergi orqanı şəxsin ƏDV qeydiyyatının ləğv edilməsi barədə məlumatı bir iş günü ərzində müvafiq icra hakimiyyəti orqanına göndərməlidir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '158'), '158.2-1',
+        'Bu Məcəllənin 158.2-ci maddəsinə əsasən vergiyə cəlb olunan əməliyyatlarının ümumi məbləği müəyyən edilərkən vergi ödəyicisinin pərakəndə ticarət və vergi orqanında uçotda olmayan şəxslərə göstərilən xidmətlər üzrə nağdsız qaydada POS-terminal vasitəsilə aparılan ödəmələr əsasında formalaşan dövriyyəsi 0,5 əmsal tətbiq edilməklə nəzərə alınır.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '158'), '158.3',
+        'Vergi orqanı ƏDV-nin məqsədləri üçün qeydiyyatı ləğv edilən şəxsin adını, onun haqqında digər məlumatları ƏDV-nin ödəyicilərinin reyestrindən silməli və verilmiş qeydiyyat bildirişini geri almalıdır.',
+        4, false, NOW(), NOW());
+
+-- Maddə 159
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('159',
+        'Vergitutma obyekti',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.1',
+        'Malların təqdim edilməsi, işlərin görülməsi, xidmətlərin göstərilməsi, Azərbaycan Respublikası ərazisində istehsal olunan kənd təsərrüfatı məhsullarının pərakəndə satışı zamanı tətbiq edilən ticarət əlavəsi və vergi tutulan idxal vergitutma obyektidir. 2022-ci il yanvarın 1-dən 5 il müddətində kənd təsərrüfatı məhsullarının (yerli və xarici mənşəli (xarici mənşəli balıq məhsulları istisna olmaqla)) topdan və pərakəndə satışı zamanı tətbiq edilən ticarət əlavəsi vergitutma obyektidir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.2',
+        'Bu fəslin müddəalarına uyğun olaraq vergidən azad edilən malların göndərilməsindən, işlərin görülməsindən və xidmətlərin göstərilməsindən başqa, müstəqil sahibkarlıq fəaliyyəti və ya hüquqi şəxs yaratmadan birgə sahibkarlıq fəaliyyəti çərçivəsində malların göndərilməsi, işlər görülməsi və xidmətlərin göstərilməsi, onlar bu Məcəllənin 167-ci və ya 168-ci maddələrinə uyğun olaraq Azərbaycan Respublikasının ərazisində həyata keçirilirsə, vergi tutulan əməliyyatlar sayılır. Bu Məcəllənin 168-ci maddəsinə uyğun olaraq Azərbaycan Respublikasının hüdudlarından kənarda xidmətlər göstərilməsi və ya işlər görülməsi vergi tutulan əməliyyatlara daxil edilmir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.3',
+        'Malların idxalı bu fəsilə uyğun olaraq vergidən azad edilən idxal istisna edilməklə, vergi tutulan idxal sayılır. Tranzit yük daşınması qaydasında, müvəqqəti idxal şəklində Azərbaycan Respublikası ərazisinə buraxılan mallar və ya gömrük qanunvericiliyinə uyğun olaraq daxili istehlak üçün idxal edilmiş və ya qəbul olunmuş sayılmayan mallar ƏDV-nin məqsədləri üçün idxal malları hesab edilmir.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.4',
+        'Vergi ödəyicisinin haqqı ödənilməklə və ya əvəzsiz qaydada öz işçilərinə və digər şəxslərə mal verməsi, iş görməsi və ya xidmət göstərməsi, habelə barter əməliyyatı vergi tutulan əməliyyat sayılır.',
+        4, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.5',
+        'Vergi ödəyicisi malları (işləri, xidmətləri) ƏDV-ni ödəməklə əldə edirsə və müvafiq əvəzləşdirmə alırsa və ya almaq hüququna malikdirsə, belə mallardan (işlərdən, xidmətlərdən) qeyri-kommersiya məqsədləri üçün istifadə edilməsi, fövqəladə hallardan, qanunvericiliklə müəyyən edilmiş təbii itki normaları daxilində zayolmadan əmələ gələn itkilərdən, təbii itki normaları daxilində xarabolmalar və bu kimi əskikgəlmələrdən başqa, malların itməsi, əskik gəlməsi, xarab olması, tam amortizasiya olunmadan uçotdan silinməsi və ya oğurlanması vergi tutulan əməliyyat sayılır.',
+        5, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.6',
+        'Vergi ödəyicisinin qeydiyyatı ləğv edilirsə, ləğvetmə vaxtı onun sahibliyində qalan mallar həmin vaxt və vergi tutulan əməliyyat çərçivəsində təqdim edilən mallar kimi qiymətləndirilir.',
+        6, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.7',
+        'Bu maddənin digər müddəalarından asılı olmayaraq, malları ƏDV-nə cəlb edilən əməliyyatlar nəticəsində əldə edən, lakin bu malları əldə edərkən, bu Məcəllənin 175-ci maddəsinə əsasən ƏDV-ni əvəzləşdirməyə hüququ olmayan şəxsin həmin malları göndərməsinə vergi tutulan əməliyyat kimi baxılmır. Əgər mallar əldə edilərkən əvəzləşdirilməsinə qismən yol verilməmişdirsə, vergi tutulan əməliyyatın məbləği əvəzləşdirmənin qismən yol verilməmiş payına mütənasib olaraq azaldılır. Verilmiş kreditin təminatı kimi bankın və ya digər kredit təşkilatının xeyrinə ipoteka ilə yüklü edilmiş və hərrac yolu ilə bankın və ya digər kredit təşkilatının mülkiyyətinə keçmiş, habelə “Notariat haqqında” Azərbaycan Respublikası Qanununun 63-cü maddəsinə əsasən verilən şəhadətnamə əsasında əldə olunmuş əmlakın təqdim edilməsi verilmiş kreditlər üzrə ödənilməyən əsas borc dəyəri həddində vergi tutulan əməliyyat sayılmır.',
+        7, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.8',
+        'ƏDV ödəyicisi kimi qeydiyyatdan keçməyən şəxslərin ƏDV tətbiq etməklə aparılan əməliyyatları, habelə ƏDV-dən azad edilən və ya sıfır (0) dərəcə ilə ƏDV-yə cəlb edilən, lakin ƏDV tətbiq etməklə aparılan əməliyyatları vergitutma obyektidir.',
+        8, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.9',
+        'Mənzil tikintisi fəaliyyəti ilə məşğul olan şəxslər tərəfindən ƏDV-nin məqsədləri üçün vergi tutulan minimum dövriyyə bu Məcəllənin 219.3-cü maddəsində müəyyən edilmiş vergitutma obyektinin hər kvadrat metri üçün 225 manat məbləğinə ölkənin şəhər və rayonlarının ərazilərinin zonalar üzrə müvafiq icra hakimiyyəti orqanının müəyyən etdiyi əmsallar tətbiq edilməklə hesablanır.',
+        9, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '159'), '159.10',
+        'Bu Məcəllənin 164.1.11-ci, 164.1.15-ci, 164.1.16-cı, 164.1.20-164.1.25-ci, 164.1.33-cü və 164.1.35-ci maddələrinə uyğun olaraq ƏDV-dən azad edilən idxal mallarının Azərbaycan Respublikasının ərazisində təqdim edilməsi vergi tutulan əməliyyat sayılır.',
+        10, false, NOW(), NOW());
+
+-- Maddə 160
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('160',
+        'Vergiyə cəlb edilməyən əməliyyatlar, o cümlədən müəssisənin təqdim edilməsi',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '160'), '160.1',
+        'Müəssisənin və ya müəssisədə müstəqil fəaliyyət göstərən bölmənin bütün aktivlərinin bir əməliyyat çərçivəsində bir vergi ödəyicisi tərəfindən digər vergi ödəyicisinə təqdim edilməsi vergi tutulan əməliyyat sayılmır.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '160'), '160.2',
+        'Bu Məcəllənin 160.1-ci maddəsində göstərilən halda müəssisəni (müəssisədə müstəqil fəaliyyət göstərən bölməni) alan və ya qəbul edən şəxs təqdim edənin bu fəsildə göstərilən və təqdim edilən müəssisəyə (müəssisədə müstəqil fəaliyyət göstərən bölməyə) aid hüquq və öhdəliklərini öz üzərinə götürür. Bu müddəa müəssisəni (müəssisədə müstəqil fəaliyyət göstərən bölməni) təqdim edən şəxsi əvvəlki vergi dövrləri üçün vergiləri, faizləri və ya maliyyə sanksiyalarını ödəməkdən azad etmir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '160'), '160.3',
+        'Bu maddə yalnız o halda tətbiq edilir ki, müəssisəni (müəssisədə müstəqil fəaliyyət göstərən bölməni) təqdim edən və alan (qəbul edən) tərəflər təqdim edilmədən sonra 10 gündən gec olmayaraq bu maddənin müddəalarının tətbiq edilməsi üçün vergi orqanına yazılı məlumat vermiş olsun.',
+        3, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '160'), '160.4',
+        'Hüquqi və fiziki şəxslər tərəfindən daşınar və daşınmaz əmlakların, qeyri-maddi aktivlərin, habelə əmlak kompleksi şəklində müəssisələrin dövlət orqanlarına (qurumlarına), eləcə də siyahısı müvafiq icra hakimiyyəti orqanının müəyyən etdiyi orqan (qurum) tərəfindən təsdiq edilən ictimai və sosial məqsədlər üçün yaradılmış fondlara əvəzsiz olaraq verilməsi vergi tutulan əməliyyat sayılmır.',
+        4, false, NOW(), NOW());
+
+-- Maddə 161
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('161',
+        'Vergi tutulan əməliyyatın dəyəri',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '161'), '161.1',
+        'Vergi tutulan əməliyyatın dəyəri vergi ödəyicisinin müştəridən və ya hər hansı digər şəxsdən aldığı, yaxud almağa hüququ olduğu haqqın ƏDV nəzərə alınmadan məbləği (yol vergisi istisna olmaqla, digər vergilər, rüsumlar və ya başqa yığımlar da daxil olmaqla) əsasında müəyyən edilir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '161'), '161.2',
+        'Əgər vergi ödəyicisi vergi tutulan əməliyyatın əvəzində mal, iş və ya xidmət alırsa, yaxud almağa hüququ varsa, bu malların, işlərin və ya xidmətlərin ƏDV nəzərə alınmadan bazar dəyəri (hər hansı rüsumlar, vergilər və ya başqa yığımlar da daxil olmaqla) vergi tutulan əməliyyatın dəyərinə daxil edilir.',
+        2, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '161'), '161.3',
+        'Bu Məcəllənin 159.4-cü, 159.5-ci və 159.6-cı maddələrində göstərilən hallarda vergi tutulan əməliyyatın dəyəri təqdim edilmiş malların, görülmüş işlərin və ya göstərilmiş xidmətlərin ƏDV nəzərə alınmadan formalaşan dəyərindən (hər hansı rüsumlar, vergilər və ya başqa yığımlar da daxil olmaqla) ibarət olur. Vergi tutulan əməliyyatın dəyəri bu Məcəllənin 159-cu maddəsində göstərilən qaydada müəyyən edilir. Bu qayda bu Məcəllənin 159.6-cı maddəsinə uyğun olaraq qeydiyyat ləğv edildikdə, əldə qalan mallara da tətbiq edilir.',
+        3, false, NOW(), NOW());
+
+-- Maddə 162
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('162',
+        'Vergi tutulan idxalın dəyəri',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '162'), '162.1',
+        'Vergi tutulan idxalın dəyəri malların Azərbaycan Respublikasının gömrük qanunvericiliyinə uyğun olaraq müəyyən edilən gömrük dəyərindən və mallar Azərbaycan Respublikasına gətirilərkən ödənilməli olan rüsumlardan və vergilərdən (ƏDV və yol vergisi nəzərə alınmadan) ibarətdir.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '162'), '162.2',
+        'Bu Məcəllənin 171.2-ci maddəsinə uyğun olaraq idxalın bir hissəsi kimi sayılan xidmət göstərildikdə, onun ƏDV nəzərə alınmadan dəyəri bu Məcəllənin 162.1-ci maddəsində göstərilən dəyərə əlavə edilir.',
+        2, false, NOW(), NOW());
+
+-- Maddə 163
+INSERT INTO tax_articles (article_number, title, chapter, active, created_at, updated_at)
+VALUES ('163',
+        'Vergi tutulan dövriyyənin dəqiqləşdirilməsi',
+        'Fəsil XI. Əlavə dəyər vergisi',
+        true, NOW(), NOW());
+
+INSERT INTO tax_sections (article_id, section_number, content, order_index, synced_to_vector_store, created_at,
+                          updated_at)
+VALUES ((SELECT id FROM tax_articles WHERE article_number = '163'), '163.1',
+        'Bu maddə aşağıdakı hallarda mal göndərənin, iş görənin və xidmət göstərənin vergi tutulan əməliyyatlarına tətbiq edilir:
+
+163.1.1. əməliyyat tam və ya qismən ləğv edildikdə, o cümlədən mal tam və qismən geri qaytarıldıqda;
+163.1.2. əməliyyatın xarakteri dəyişdikdə;
+163.1.3. qiymətlərin aşağı düşməsi və ya hər hansı digər səbəbdən əməliyyat üçün razılaşdırılmış kompensasiya dəyişdikdə; yaxud
+163.1.4. vergi ödəyicisi elektron qaimə-faktura verdikdən sonra vergi tutulan dövriyyənin dəqiqləşdirilməsi üçün əsas verən hallar üzə çıxdıqda və bu cür dəqiqləşdirmə qanunvericiliyə müvafiq olaraq aparıldıqda.',
+        1, false, NOW(), NOW()),
+       ((SELECT id FROM tax_articles WHERE article_number = '163'), '163.2',
+        'Vergi ödəyicisi bu Məcəllənin 163.1-ci maddəsində göstərilən hallardan birinin nəticəsində:
+
+163.2.1. ƏDV üçün elektron qaimə-fakturanı vermiş və ƏDV-nin məbləğini həmin elektron qaimə-fakturada düzgün göstərməmişdirsə, yaxud
+163.2.2. ƏDV-nin bəyannaməsində verginin məbləğini düzgün göstərməmişdirsə, bu Məcəllənin 174.2-ci və ya 175.5-ci maddələrinə müvafiq surətdə dəqiqləşdirmə aparılır. Dəqiqləşdirmə qiymətləndirmə bazasında dəyişikliyin baş verdiyi hesabat dövründə aparılır.',
+        2, false, NOW(), NOW());
